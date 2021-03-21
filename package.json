@@ -1,0 +1,16 @@
+{
+  "name": "ohmyfoodp03",
+  "version": "1.0.1",
+  "description": "P03 premier projet local avec sass",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^5.0.0",
+    "sass": "^1.32.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "sass": "sass --watch ./sass/scss:./sass/css/"
+  },
+  "author": "Joseph ANGILERI",
+  "license": "MIT"
+}
