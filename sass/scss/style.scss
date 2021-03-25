@@ -1,5 +1,6 @@
 @import "variables";
 @import "mixins";
+@import "animations";
 
 *{
     margin: 0;
@@ -32,4 +33,16 @@ article a .rest-img {
     width: 100%;
     height: 450px;
     object-fit: cover;
+}
+
+/***********************************
+Menu à la française
+***********************************/
+
+.francais
+{
+    width: 100%;
+    height: 50vw;
+    object-fit: cover;
+    
 }
