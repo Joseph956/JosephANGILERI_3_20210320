@@ -1,0 +1,28 @@
+@keyframes spin
+{
+    100% {
+        opacity: 0;
+        z-index: -10000;
+        transform:rotate(360deg);
+        
+    }
+}
+
+@keyframes ico-menus {
+  0% {
+    transform: translate (0)
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+} 
+
+
+  

@@ -1,6 +1,7 @@
-@import "variables";
-@import "mixins";
-@import "animations";
+@import "_variables";
+@import "_mixins";
+@import "_animations";
+@import "_placeholders";
 
 *{
     margin: 0;
@@ -9,24 +10,22 @@
 
 body
 {
-    width: 100%;
-    align-content: center;
-    margin: auto;
-    height: 100pt;
+    @extend %flex-center-menus;
 }
 
 header
 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @extend %header-menus;
 }
 
 main
 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @extend %main-menus;
+}
+
+section
+{
+    display: block;
 }
 
 article a .rest-img {
@@ -50,10 +49,194 @@ Menu à la française
 /***********************************
 Menu palette du gout
 ***********************************/
-
-.gout
+.palette-du-gout
 {
-    width: 100%;
-    height: 50vw;
-    object-fit: cover;
+    @extend %main-menus;
+    @extend %header-menus;
 }
+
+.img-menus
+{
+    @extend %img-menus;
+}
+
+
+.menus
+{
+    max-width: 100%;
+    display: flex;
+}
+
+.section-menus
+{
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0 1rem;
+    margin: 0 1rem;
+}
+
+/*.section-entrees
+{
+    @include anim-menus;
+    overflow: hidden;
+    transform: scale(0);
+    cursor: pointer;
+}*/
+
+
+.container
+{
+    @extend %flex-container-menus;
+    @include Container-menus;
+    overflow: hidden;
+    /*transform: scale(0);*/
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.entrees:hover
+{
+    @include anim-menus;
+}
+
+/*&_.menus-header {        
+    overflow: hidden;
+    white-space: nowrap;
+    }
+   /* &_.menus-titre {
+        margin: 0;
+        align-content: flex-start;
+        }*/
+       /* &_.menus-description {
+            margin: 0;
+            align-content: flex-start;
+        }
+        &_.menus-prix {
+            @include menus-prix;
+        }*/
+
+.menus-prix
+{
+    @include menus-prix;
+
+}
+
+
+
+.entrees .menus-choix:hover
+{
+    margin-right: -1rem;
+    cursor: pointer;
+    
+   
+}
+
+.entrees:hover 
+{
+    &_.btn.menus-choix
+    {
+        transform: scale(1);
+        span {
+            transform: translateY(0);
+        }
+        
+    }
+       
+   
+}
+
+
+.menus-choix
+{
+    @extend %flex-center;
+    background-color: $fond-menus;
+    @include menus-select;
+}
+
+.menus-icon
+{
+    @extend %flex-center;
+    @include menus-icon;    
+    color: $fond-menus;
+    transform: rotate(360deg);
+    animation-fill-mode: both;
+    cursor: pointer;
+    &_.ico-menus
+        {
+            transform: rotate(0);
+        }
+}
+
+
+
+
+
+/***********************************************
+Spinner loader
+***********************************************/
+
+/*.accueil-francais
+{
+    height: 100%;
+    width: 100%;
+    font-weight: unit($number: 5);
+    background-color: rgba(255, 255, 255, 0.9);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
+
+.loader {
+    animation:spin 1s /*infinite*/ linear;
+    animation-iteration-count: 5;
+    animation-delay: 1.75s;
+    border:solid 2vmin transparent;
+    border-radius:50%;
+    background-color: hsla(0,0%,100%,.9);
+    border-right-color:#09f;
+    border-top-color:#09f;
+    box-sizing:border-box;
+    height:20vmin;
+    left:calc(50% - 10vmin);
+    position:fixed;
+    top:calc(50% - 10vmin);
+    width:20vmin;
+    z-index:10000;
+    &:before {
+      animation:spin 2s /*infinite*/ linear;
+      animation-iteration-count: 5;
+      animation-delay: 1.75s;
+      border:solid 2vmin transparent;
+      border-radius:50%;
+      border-right-color:#3cf;
+      border-top-color:#3cf;
+      box-sizing:border-box;
+      content:"";
+      height:16vmin;
+      left:0;
+      position:absolute;
+      top:0;
+      width:16vmin;
+    }
+    &:after {
+      animation:spin 3s /*infinite */ linear;
+      animation-iteration-count: 5;
+      animation-delay: 1.75s;
+      border:solid 2vmin transparent;
+      border-radius:50%;
+      border-right-color:#6ff;
+      border-top-color:#6ff;
+      box-sizing:border-box;
+      content:"";
+      height:12vmin;
+      left:2vmin;
+      position:absolute;
+      top:2vmin;
+      width:12vmin;
+    }
+  }
+  
+
