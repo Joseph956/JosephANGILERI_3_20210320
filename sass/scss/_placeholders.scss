@@ -7,11 +7,25 @@
     align-items: center;
 }
 
+%flex-col {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
 %flex-center-menus {
     width: 100%;
     align-content: center;
     margin: auto;
     height: 100vh;
+}
+
+//Containers
+%flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 //Images menus
@@ -23,9 +37,7 @@
 
 //Corps de page menus
 %main-menus {
-    margin-top: -4rem;
-    border-radius: 3rem 3rem;
-    background-color: #f6f6f6;
+    margin-top: 0.2rem;
     position: relative;
 }
 
@@ -37,6 +49,19 @@
     justify-content: space-evenly;
 }
 
+%header-accueil {
+    box-shadow: 0.2rem 0.2rem 1rem;
+    position: relative;
+    padding: 40px 0 30px 0;
+}
+
+%header-logo {
+    margin: 1rem;
+    border-radius: 0;
+    width: 10rem;
+    position: relative;
+}
+
 //section menus
 %flex-center-section {
     display: flex;
@@ -45,17 +70,32 @@
 }
 
 //Container menus
-%flex-container-menus{
+%flex-container-menus {
     display: flex;
     align-items: center;
     background-color: #fff;
     justify-content: space-between;
 }
 
+//flex icon coeur
+%flex-icon-coeur {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 //Prix des menus
-/*%flex-prix-menus{
+%flex-prix-menus {
     display: flex;
     justify-content: flex-end;
-    justify-content: flex-end;
+    align-items: flex-end;
+    padding-left: .5rem;
     font-weight: bold;
-}*/
+}
+
+//Footer liens
+%footer-liens {
+    color: white;
+    padding: 0.3rem;
+    text-decoration: none;
+}

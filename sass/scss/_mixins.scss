@@ -7,6 +7,13 @@
     max-width: 98%;*/
 }
 
+@mixin header-accueil {
+    box-shadow: 0.2rem 0.2rem 1rem;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
 @mixin menus-select {
     width: 4rem;
     height: 5rem;
@@ -45,4 +52,54 @@
     align-items: flex-end;
     padding-left: .5rem;
     font-weight: bold;
+}
+
+/**********************************************************
+Accueil section fonctionnement
+**********************************************************/
+@mixin btn-menus 
+{
+    padding: 0 1rem 0 0;
+    position: relative;
+    background-color: white;
+    border: 2px solid transparent;
+    margin: 1rem 0 1rem 0;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #cecdcd, -5px -5px 10px #cfcece; 
+}
+
+@mixin btn-before
+{
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    color: white;
+    font-size: 1rem;
+    background-color: $color-primary;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 10px #cecdcd, -5px -5px 10px #cfcece;
+    left: 0;
+    bottom: 0;
+    transform: translate(-50%, -60%);
+}
+
+/***************************************************************
+Accueil section restaurants
+***************************************************************/
+@mixin diapos-titre {
+    font-size: 1.2rem;
+    color: black;
+    padding: 0.3rem 1rem;
+    font-style: normal;
+    font-weight: normal;
+}
+
+@mixin diapos-description {
+    font-size: 1.1rem;
+    color: black;
+    padding: 0rem 1rem;
 }
