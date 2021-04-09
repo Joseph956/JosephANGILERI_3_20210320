@@ -5,50 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" href="/sass/css/style.css" media="screen" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/62fdb3f298.js"
-      crossorigin="anonymous"
-    ></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/62fdb3f298.js"crossorigin="anonymous"></script>
     <title>Restaurant à la française</title>
   </head>
   <body>
-    <div class="loader-cerclecontainer">
-      <div class="loader"></div>
-    </div>
 
     <header>
       <div class="logo-menus">
-        <span><i class="fa-arrow-left fas"></i></span>
-        <a href="/index.html">
-          <img id="logo" src="/logo/ohmyfood.png" alt="logo_ohmyfood" />
-        </a>
+          <div class="fleche">
+              <a href="/index.html">
+                 <i class="fa-arrow-left fas"></i>
+              </a>
+          </div>
+          <div>
+              <a href="/index.html">
+                 <img id="logo" src="/logo/ohmyfood.png" alt="logo_ohmyfood">
+              </a>
+          </div>
       </div>
-    </header>
+  </header>
 
-    <div class="accueil-francais">
       <a href="/index.html">
-        <img
-          class="francais"
-          src="/images/a_la_francaise_1280w.jpg"
-          alt="Menu_à_la_francaise"
-        />
+        <img class="img-menus"src="/images/a_la_francaise_1280w.jpg"alt="Menu_à_la_francaise"/>
       </a>
-    </div>
 
-    <main class="a-la-francaise">
-      <header class="entete">
-        <h2>A la française</h2>
-      </header>
+    <main class="carte-restaurant carte">
+      <section class="entete">
+        <div>
+           <h2 class="cartes-titre">A la française</h2>
+        </div>
+        <div class="coeur">
+          <i class="fas fa-heart icon"></i>
+        </div>
+      </section>
       <div class="menus">
         <section class="section-menus">
-          <h3 class="entrees-titre">ENTREES</h3>
+          <h3 class="carte-titre">ENTREES</h3>
+          <div class="separateur"></div>
           <article class="container entrees">
             <header class="menus-header">
               <h4 class="menus-titre">Tartare de poulpe acidulé</h4>
               <p class="menus-description">Aux zeste d'orange</p>
             </header>
-            <div>25€</div>
-            <div class="menus-prix">
+            <div class="menus-prix">25€</div>
+            <div class="menus-anim">
               <div class="menus-choix">
                 <div class="menus-icon">
                   <span>
@@ -63,8 +65,8 @@
               <h4 class="menus-titre">Velouté de légumes d'antan</h4>
               <p class="menus-description">Carotte, panais, topinambour</p>
             </header>
-            <div>35€</div>
-            <div class="menus-prix">
+            <div class="menus-prix">35€</div>
+            <div class="menus-anim">
               <div class="menus-choix">
                 <div class="menus-icon">
                   <span>
@@ -79,8 +81,8 @@
               <h4 class="menus-titre">Soupe à l'oignon</h4>
               <p class="menus-description">Revisité</p>
             </header>
-            <div>20€</div>
-            <div class="menus-prix">
+            <div class="menus-prix">20€</div>
+            <div class="menus-anim">
               <div class="menus-choix">
                 <div class="menus-icon">
                   <span>
@@ -93,7 +95,8 @@
         </section>
 
         <section class="section-menus">
-          <h3 class="plats-titre">PLATS</h3>
+          <h3 class="carte-titre">PLATS</h3>
+          <div class="separateur"></div>
           <article class="container plats">
             <header class="menus-header">
               <h4 class="menus-titre">Coquilles Saint-Jacques</h4>
@@ -101,8 +104,8 @@
                 Accompagnées d'une purée de panais
               </p>
             </header>
-            <div>40€</div>
-            <div class="menus-prix">
+            <div class="menus-prix">40€</div>
+            <div class="menus-anim">
               <div class="menus-choix">
                 <div class="menus-icon">
                   <span>
@@ -117,8 +120,8 @@
               <h4 class="menus-titre">Magret de canard</h4>
               <p class="menus-description">Et parmentier de pommes de terres</p>
             </header>
-            <div>35€</div>
-            <div class="menus-prix">
+            <div class="menus-prix">35€</div>
+            <div class="menus-anim">
               <div class="menus-choix">
                 <div class="menus-icon">
                   <span>
@@ -135,8 +138,8 @@
                 Sur son lit de gnocchis aux légumes
               </p>
             </header>
-            <div>44€</div>
-            <div class="menus-prix">
+            <div class="menus-prix">44€</div>
+            <div class="menus-anim">
               <div class="menus-choix">
                 <div class="menus-icon">
                   <span>
@@ -149,14 +152,15 @@
         </section>
 
         <section class="section-menus">
-          <h3 class="desserts-titre">DESSERTS</h3>
+          <h3 class="carte-titre">DESSERTS</h3>
+          <div class="separateur"></div>
           <article class="container desserts">
             <header class="menus-header">
               <h4 class="menus-titre">Pétales de violettes glacés</h4>
               <p class="menus-description">Et purée de noisettes</p>
             </header>
-            <div>18€</div>
-            <div class="menus-prix">
+            <div class="menus-prix">18€</div>
+            <div class="menus-anim">
               <div class="menus-choix">
                 <div class="menus-icon">
                   <span>
@@ -171,8 +175,8 @@
               <h4 class="menus-titre">Fondant au chocolat</h4>
               <p class="menus-description">Revisité</p>
             </header>
-            <div>22€</div>
-            <div class="menus-prix">
+            <div class="menus-prix">22€</div>
+            <div class="menus-anim">
               <div class="menus-choix">
                 <div class="menus-icon">
                   <span>
@@ -187,8 +191,8 @@
               <h4 class="menus-titre">Millefeuille croustillant</h4>
               <p class="menus-description">Myrtilles et pâte d'amande</p>
             </header>
-            <div>23€</div>
-            <div class="menus-prix">
+            <div class="menus-prix">23€</div>
+            <div class="menus-anim">
               <div class="menus-choix">
                 <div class="menus-icon">
                   <span>
@@ -203,12 +207,38 @@
       <button>Commander</button>
     </main>
 
-    <footer>
-      <h2>ohmyfood</h2>
-      <span>Proposer un restaurant</span>
-      <span>Devenir partenaire</span>
-      <p>Mentions légales</p>
-      <p>Contact</p>
+    <footer class="footer">
+      <div class="footer-container">
+        <ul class="footer-menus">
+          <li class="footer-liens">
+            <ul>
+              <a class="footer-logo" href="/index.html"><h2>ohmyfood</h2></a>
+            </ul>
+          </li>
+          <li class="footer-liens">
+            <ul>
+              <i class="fas fa-utensils footer-icon1"></i>
+              <a class="footer-rest" href="#">Proposer un restaurant</a>
+            </ul>
+          </li>
+          <li class="footer-liens">
+            <ul>
+              <i class="fas fa-hands-helping footer-icon2"></i>
+              <a class="footer-part" href="#">Devenir partenaire</a>
+            </ul>
+          </li>
+          <li class="footer-liens">
+            <ul>
+              <a class="footer-legal" href="#">Mentions légales</a>
+            </ul>
+          </li>
+          <li class="footer-liens">
+            <ul>
+              <a class="footer-contact" href="#">Contact</a>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </footer>
   </body>
 </html>

@@ -31,21 +31,22 @@
 //Images menus
 %img-menus {
     width: 100%;
-    height: 50vw;
+    height: 60vw;
     object-fit: cover;
 }
 
 //Corps de page menus
 %main-menus {
-    margin-top: 0.2rem;
+    margin-top: -1.8rem;
     position: relative;
+    background-color: white;
+    border-radius: 2rem 2rem 0 0;
 }
 
 //entête des menus
 %header-menus {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-evenly;
 }
 
@@ -72,7 +73,7 @@
 //Container menus
 %flex-container-menus {
     display: flex;
-    align-items: center;
+    /*align-items: center;*/
     background-color: #fff;
     justify-content: space-between;
 }
@@ -81,7 +82,7 @@
 %flex-icon-coeur {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /*align-items: center;*/
 }
 
 //Prix des menus
@@ -89,8 +90,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    padding-left: .5rem;
-    font-weight: bold;
+    
 }
 
 //Footer liens

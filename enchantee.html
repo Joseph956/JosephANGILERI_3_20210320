@@ -5,30 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/sass/css/style.css" media="screen"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"rel="stylesheet"/>
     <script src="https://kit.fontawesome.com/62fdb3f298.js" crossorigin="anonymous"></script>
-    <title>Restaurant la palette du goût</title>
+    <title>Restaurant la note enchantée</title>
 </head>
 <body>
     
-        <header>
-            <div class="logo-menus">
-                <span><i class="fa-arrow-left fas"></i></span>
+    <header>
+        <div class="logo-menus">
+            <div class="fleche">
                 <a href="/index.html">
-                    <img id="logo" src="/logo/ohmyfood.png" alt="logo_ohmyfood">            
+                   <i class="fa-arrow-left fas"></i>
                 </a>
             </div>
-        </header>
+            <div>
+                <a href="/index.html">
+                   <img id="logo" src="/logo/ohmyfood.png" alt="logo_ohmyfood">
+                </a>
+            </div>
+        </div>
+    </header>
         <a href="/index.html">
             <img class="img-menus" src="/images/la_note_enchantee.jpg" alt="Menu la note enchantée">
         </a>
 
-        <main class="note-enchantee">
-            <header class="entete">
-                <h2>La note enchantée</h2>
-            </header>
+        <main class="carte-restaurant carte">
+            <section class="entete">
+                <div>
+                   <h2 class="cartes-titre">La note enchantée</h2>
+                </div>
+                <div class="coeur">
+                  <i class="fas fa-heart icon"></i>
+                </div>
+              </section>
             <div class="menus">
             <section class="section-menus">
-                <h3 class="entrees-titre">ENTREES</h3>
+                <h3 class="carte-titre">ENTREES</h3>
+                <div class="separateur"></div>
                 <article class="container entrees">
                     <header class="menus-header">
                         <h4 class="menus-titre">Ravioles de foie gras</h4>
@@ -87,7 +101,8 @@
                 </article>
             </section>
             <section class="section-menus">
-                <h3 class="plats-titre">PLATS</h3>
+                <h3 class="carte-titre">PLATS</h3>
+                <div class="separateur"></div>
                 <article class="container plats">
                     <header class="menus-header">
                         <h4 class="menus-titre">Noix de coquilles Saint-Jacques</h4>
@@ -132,7 +147,8 @@
                 </article>
             </section>
             <section class="section-menus">
-                <h3 class="desserts-titre">DESSERTS</h3>
+                <h3 class="carte-titre">DESSERTS</h3>
+                <div class="separateur"></div>
                 <article class="container desserts">
                     <header class="menus-header">
                         <h4 class="menus-titre">Macaron noisette et chocolat</h4>
@@ -179,12 +195,38 @@
         </div>
         <button>Commander</button>
     </main>
-    <footer>
-        <h2>ohmyfood</h2>
-        <span>Proposer un restaurant</span>
-        <span>Devenir partenaire</span>
-        <p>Mentions légales</p>
-        <p>Contact</p>
-    </footer>
+    <footer class="footer">
+        <div class="footer-container">
+          <ul class="footer-menus">
+            <li class="footer-liens">
+              <ul>
+                <a class="footer-logo" href="/index.html"><h2>ohmyfood</h2></a>
+              </ul>
+            </li>
+            <li class="footer-liens">
+              <ul>
+                <i class="fas fa-utensils footer-icon1"></i>
+                <a class="footer-rest" href="#">Proposer un restaurant</a>
+              </ul>
+            </li>
+            <li class="footer-liens">
+              <ul>
+                <i class="fas fa-hands-helping footer-icon2"></i>
+                <a class="footer-part" href="#">Devenir partenaire</a>
+              </ul>
+            </li>
+            <li class="footer-liens">
+              <ul>
+                <a class="footer-legal" href="#">Mentions légales</a>
+              </ul>
+            </li>
+            <li class="footer-liens">
+              <ul>
+                <a class="footer-contact" href="#">Contact</a>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </footer>
 </body>
 </html>

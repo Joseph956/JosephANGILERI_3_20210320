@@ -1,3 +1,13 @@
+/*************************************
+Page d'accueil Header
+*************************************/
+@mixin header-accueil {
+    box-shadow: 0.2rem 0.2rem 1rem;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
 
 @mixin Container-menus {
     border-radius: 0.9rem;
@@ -7,12 +17,7 @@
     max-width: 98%;*/
 }
 
-@mixin header-accueil {
-    box-shadow: 0.2rem 0.2rem 1rem;
-    position: relative;
-    width: 100%;
-    text-align: center;
-}
+
 
 @mixin menus-select {
     width: 4rem;
@@ -47,15 +52,13 @@
 
 @mixin menus-prix
 {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding-left: .5rem;
-    font-weight: bold;
+    font-family: 'roboto';
+    padding-bottom: 2px;
+    padding-left: .5rem;   
 }
 
 /**********************************************************
-Accueil section fonctionnement
+Page d'accueil section fonctionnement
 **********************************************************/
 @mixin btn-menus 
 {
@@ -63,7 +66,7 @@ Accueil section fonctionnement
     position: relative;
     background-color: white;
     border: 2px solid transparent;
-    margin: 1rem 0 1rem 0;
+    margin: 1rem 0.5rem 1rem 1rem;
     border-radius: 20px;
     box-shadow: 5px 5px 10px #cecdcd, -5px -5px 10px #cfcece; 
 }
@@ -88,7 +91,7 @@ Accueil section fonctionnement
 }
 
 /***************************************************************
-Accueil section restaurants
+Page d'accueil section restaurants
 ***************************************************************/
 @mixin diapos-titre {
     font-size: 1.2rem;

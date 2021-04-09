@@ -1,9 +1,12 @@
 @charset "UTF-8";
+/*************************************
+Page d'accueil Header
+*************************************/
 /**********************************************************
-Accueil section fonctionnement
+Page d'accueil section fonctionnement
 **********************************************************/
 /***************************************************************
-Accueil section restaurants
+Page d'accueil section restaurants
 ***************************************************************/
 @keyframes spin {
   100% {
@@ -54,25 +57,20 @@ body {
 
 .img-menus {
   width: 100%;
-  height: 50vw;
+  height: 60vw;
   object-fit: cover;
 }
 
-.palette-du-gout,
-.note-enchantee,
-.a-la-francaise,
-.delice-des-sens, main {
-  margin-top: 0.2rem;
+.carte-restaurant {
+  margin-top: -1.8rem;
   position: relative;
+  background-color: white;
+  border-radius: 2rem 2rem 0 0;
 }
 
-.palette-du-gout,
-.note-enchantee,
-.a-la-francaise,
-.delice-des-sens, main, header {
+header, .carte-restaurant {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-evenly;
 }
 
@@ -85,7 +83,7 @@ body {
 
 .container {
   display: flex;
-  align-items: center;
+  /*align-items: center;*/
   background-color: #fff;
   justify-content: space-between;
 }
@@ -93,15 +91,13 @@ body {
 .icon-coeur {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  /*align-items: center;*/
 }
 
 .menus-prix {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  padding-left: 0.5rem;
-  font-weight: bold;
 }
 
 .footer-menus .footer-contact, .footer-menus .footer-legal, .footer-menus .footer-part, .footer-menus .footer-rest {
@@ -188,7 +184,7 @@ Exploration des restaurants
   position: relative;
   background-color: white;
   border: 2px solid transparent;
-  margin: 1rem 0 1rem 0;
+  margin: 1rem 0.5rem 1rem 1rem;
   border-radius: 20px;
   box-shadow: 5px 5px 10px #cecdcd, -5px -5px 10px #cfcece;
 }
@@ -215,7 +211,7 @@ Exploration des restaurants
   position: relative;
   background-color: white;
   border: 2px solid transparent;
-  margin: 1rem 0 1rem 0;
+  margin: 1rem 0.5rem 1rem 1rem;
   border-radius: 20px;
   box-shadow: 5px 5px 10px #cecdcd, -5px -5px 10px #cfcece;
 }
@@ -242,7 +238,7 @@ Exploration des restaurants
   position: relative;
   background-color: white;
   border: 2px solid transparent;
-  margin: 1rem 0 1rem 0;
+  margin: 1rem 0.5rem 1rem 1rem;
   border-radius: 20px;
   box-shadow: 5px 5px 10px #cecdcd, -5px -5px 10px #cfcece;
 }
@@ -376,6 +372,111 @@ Footer
         flex-wrap: wrap;
     }
 }*/
+/*************************************
+En tête des restaurants
+*************************************/
+.logo-menus {
+  width: 100%;
+}
+.logo-menus .fleche {
+  width: 12%;
+}
+.logo-menus .fa-arrow-left {
+  align-self: start;
+}
+
+/***********************************
+Header des cartes de menus 
+***********************************/
+/**********************************
+Titre du menus et bouton "j'aime"
+**********************************/
+.entete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+}
+.entete .cartes-titre {
+  width: 100%;
+  font-size: 1.4rem;
+  padding: 1.5rem 0 0 1.5rem;
+}
+.entete .coeur {
+  width: 20%;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.3rem;
+  margin-top: 25px;
+}
+.entete .coeur.icon {
+  display: flex;
+}
+
+/***************************************
+Section menus
+***************************************/
+.menus {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.menus .section-menus {
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0 0.5rem;
+  margin: 0 1rem;
+}
+.menus .carte-titre {
+  font-size: 1rem;
+  font-weight: inherit;
+  margin-top: 20px;
+}
+.menus .separateur {
+  width: 4rem;
+  height: 4px;
+  background-color: #99E2D0;
+  margin: 0.5rem 0 0 0;
+}
+
+.container {
+  border-radius: 0.9rem;
+  box-shadow: 0.2rem 0.2rem 1rem;
+  margin: 1rem 0;
+  /* width: 98%;
+   max-width: 98%;*/
+  overflow: hidden;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+/*****************************************
+Container des menus
+*****************************************/
+.menus-header {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menus-header .menus-titre {
+  font-weight: inherit;
+  font-size: 1rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menus-header .menus-description {
+  font-size: 1rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.menus-prix {
+  font-family: "roboto";
+  padding-bottom: 2px;
+  padding-left: 0.5rem;
+  font-weight: bold;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -387,32 +488,21 @@ body {
 
 header {
   font-family: "Shrikhand", Roboto;
-}
-
-.header-accueil {
-  box-shadow: 0.2rem 0.2rem 1rem;
-  position: relative;
   width: 100%;
-  text-align: center;
+  text-align: start;
 }
 
-main {
-  font-family: "Shrikhand", Roboto;
-}
-
+/*main
+{
+    @extend %main-menus;
+    @extend %header-menus;
+}*/
 section {
   display: block;
 }
 
 .logo-accueil {
   font-size: 1rem;
-}
-
-.logo-menus {
-  justify-content: space-between;
-}
-.logo-menus .fa-arrow-left {
-  align-self: start;
 }
 
 h1, h2, h3, h4 {
@@ -426,27 +516,13 @@ p {
 /***********************************
 Menu à la française
 ***********************************/
-.francais {
-  width: 100%;
-  height: 50vw;
-  object-fit: cover;
-}
+/*.francais
+{
+    width: 100%;
+    height: 50vw;
+    object-fit: cover;
 
-/***********************************
-Les menus
-***********************************/
-.menus {
-  max-width: 100%;
-  display: flex;
-}
-
-.section-menus {
-  max-width: 100%;
-  overflow: hidden;
-  padding: 0 1rem;
-  margin: 0 1rem;
-}
-
+}*/
 /*.section-entrees
 {
     @include anim-menus;
@@ -454,18 +530,6 @@ Les menus
     transform: scale(0);
     cursor: pointer;
 }*/
-.container {
-  border-radius: 0.9rem;
-  box-shadow: 0.2rem 0.2rem 1rem;
-  margin: 1rem 0;
-  /* width: 98%;
-   max-width: 98%;*/
-  overflow: hidden;
-  /*transform: scale(0);*/
-  padding: 1rem;
-  cursor: pointer;
-}
-
 .entrees:hover {
   animation: ico-menus 0.6s;
   animation-duration: 0.6s;
@@ -493,10 +557,6 @@ Les menus
  &_.menus-prix {
      @include menus-prix;
  }*/
-.menus-prix {
-  /*@include menus-prix;*/
-}
-
 .entrees .menus-choix:hover {
   margin-right: -1rem;
   cursor: pointer;
