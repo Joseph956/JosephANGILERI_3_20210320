@@ -104,6 +104,10 @@ Section menus
 /*****************************************
 Container des menus
 *****************************************/
+.header
+{
+    text-align: center; 
+}
 
 .menus-header
 {
@@ -130,3 +134,33 @@ Container des menus
     @include menus-prix; 
     font-weight: bold;
     }
+
+/*************************************
+Bouton commander
+*************************************/
+.cmd
+{
+    font-size: 1rem;
+    padding: 1rem;
+    margin: 3rem 3rem 5rem 4rem;
+    border-radius: 100px;
+    color: white;
+    border: #9356DC;
+    background-image: linear-gradient(to top, #9356DC, #FF79DA);
+    box-shadow: 5px 5px 10px #cecdcd, -5px -5px 10px #cfcece;
+    cursor: pointer;
+    transform: translateX(-5%);
+    transition: opacity 0.4s;
+
+    &:hover {
+        background-color: rgb(204, 0, 255);
+        border: transparent;
+        
+    }
+
+    &:active {
+        box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+                border: transparent;
+    }
+}

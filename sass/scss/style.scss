@@ -14,7 +14,6 @@
 body
 {
     @extend %flex-center-menus;
-    font-family: $fonts;
 }
 
 header
@@ -22,9 +21,7 @@ header
     @extend %header-menus;
     font-family: $fonts;
     width: 100%;
-    text-align: start; 
 }
-
 
 
 /*main
@@ -51,6 +48,8 @@ section
 h1, h2, h3, h4
 {
     font-family: 'Shrikhand', cursive;
+    font-style: normal;
+    font-weight: normal;
 }
 
 p
