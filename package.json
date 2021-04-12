@@ -9,12 +9,12 @@
   },
   "devDependencies": {},
   "scripts": {
-    "sass": "sass --watch ./sass/scss:./sass/css/"
+    "sass": "sass --watch ./sass/scss/style.scss:./sass/css/style.css"
   },
 
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://joseph956.github.io/JosephANGILERI_3_20210320/"
   },
   "author": "Joseph ANGILERI",
   "license": "MIT"
