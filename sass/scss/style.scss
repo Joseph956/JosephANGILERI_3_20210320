@@ -5,6 +5,7 @@
 @import "_accueil";
 @import "_responsive";
 @import "_restaurants";
+@import "_responsive";
 
 *{
     margin: 0;
@@ -19,16 +20,18 @@ body
 header
 {
     @extend %header-menus;
+    @include header-accueil;
     font-family: $fonts;
     width: 100%;
+
 }
 
 
-/*main
+main
 {
-    @extend %main-menus;
-    @extend %header-menus;
-}*/
+   height: auto;
+}
+
 
 section
 {
@@ -55,6 +58,50 @@ h1, h2, h3, h4
 p
 {
     font-family: 'Roboto', sans-serif;
+}
+
+/*******************************************
+Positionnement du site en milieu de page
+*******************************************/
+
+html, body, header, main
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: auto;
+    margin: 0;
+
+}
+
+header
+{
+    max-width: 1950px;
+}
+
+main
+{
+    max-width: 1950px;
+}
+
+.contenu
+{
+    height: auto;
+}
+
+.footer
+{
+    max-width: 1950px;
+}
+
+footer
+{
+    display:inline-table;
+    position: relative;
+    width: inherit;
+    height: 1px;
 }
 
 /***********************************

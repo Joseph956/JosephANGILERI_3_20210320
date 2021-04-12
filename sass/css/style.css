@@ -45,7 +45,7 @@ body {
   width: 100%;
   align-content: center;
   margin: auto;
-  height: 100vh;
+  height: auto;
 }
 
 .section-restaurants .container-restaurants {
@@ -127,7 +127,7 @@ Exploration des restaurants
 .explore-section {
   background-color: #f3f2f2f2;
   width: 100%;
-  height: 60vh;
+  height: 30vh;
   justify-content: center;
   text-align: center;
   padding: 1.2rem 0 0 0;
@@ -182,10 +182,10 @@ Exploration des restaurants
   color: #9356DC;
 }
 .fct-container .btn1 {
-  padding: 0 1rem 0 0;
   position: relative;
   background-color: white;
   border: 2px solid transparent;
+  padding: 0 0.5rem 0 0;
   margin: 1rem 0.5rem 1rem 1rem;
   border-radius: 20px;
   box-shadow: 5px 5px 10px #cecdcd, -5px -5px 10px #cfcece;
@@ -209,10 +209,10 @@ Exploration des restaurants
   content: "1";
 }
 .fct-container .btn2 {
-  padding: 0 1rem 0 0;
   position: relative;
   background-color: white;
   border: 2px solid transparent;
+  padding: 0 0.5rem 0 0;
   margin: 1rem 0.5rem 1rem 1rem;
   border-radius: 20px;
   box-shadow: 5px 5px 10px #cecdcd, -5px -5px 10px #cfcece;
@@ -236,10 +236,10 @@ Exploration des restaurants
   content: "2";
 }
 .fct-container .btn3 {
-  padding: 0 1rem 0 0;
   position: relative;
   background-color: white;
   border: 2px solid transparent;
+  padding: 0 0.5rem 0 0;
   margin: 1rem 0.5rem 1rem 1rem;
   border-radius: 20px;
   box-shadow: 5px 5px 10px #cecdcd, -5px -5px 10px #cfcece;
@@ -343,8 +343,11 @@ Footer
 ********************************/
 .footer {
   background-color: black;
-  padding: 1.5rem 1rem;
 }
+.footer .footer-container {
+  padding: 1rem;
+}
+
 .footer-menus {
   color: white;
   list-style: none;
@@ -375,6 +378,171 @@ Footer
         flex-wrap: wrap;
     }
 }*/
+/*// X-Small devices (portrait phones, less than 576px)
+@media /*(max-width: 575.98px)
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) 
+
+/// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px)*/
+@media screen and (min-width: 991.98px) {
+  .fct-section .fct-titre {
+    padding: 3rem 0 1rem 7rem;
+  }
+
+  .fct-container .btns {
+    margin: 1rem 20rem 1rem 20rem;
+  }
+
+  .section-restaurants {
+    width: 100%;
+    background-color: #f2f2f2f2;
+    margin: 3rem;
+  }
+  .section-restaurants .section-titre {
+    padding: 3rem 0 0 7rem;
+  }
+  .section-restaurants .container-restaurants {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: relative;
+  }
+  .section-restaurants .diapos-restaurants {
+    margin: 0.5rem 1rem 3rem 1rem;
+  }
+  .section-restaurants .contenu-restaurants .rest-img {
+    width: 40vw;
+    height: 20vw;
+    min-width: 10vw;
+  }
+}
+/*/ X-Large devices (large desktops, less than 1400px)*/
+@media screen and (min-width: 1300px) {
+  .explore-section {
+    height: 20vh;
+  }
+  .explore-section .explore-texte {
+    margin: 0 0 3rem 0;
+  }
+
+  .fct-section {
+    flex-direction: inherit;
+    align-items: center;
+  }
+
+  .fct-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 0;
+  }
+  .fct-container .fct-titre {
+    padding: 1rem 0 1rem 0rem;
+    text-align: center;
+  }
+  .fct-container .btns {
+    display: flex;
+    margin: 1rem 5rem 1rem 5rem;
+  }
+  .fct-container .btn1 {
+    padding: 0 2rem 0 0;
+    margin: 1rem 2.5rem 1rem 1rem;
+  }
+  .fct-container .btn2 {
+    padding: 0 3rem 0 0;
+    margin: 1rem 2.5rem 1rem 1rem;
+  }
+  .fct-container .btn3 {
+    padding: 0 3rem 0 0;
+    margin: 1rem 2.5rem 1rem 1rem;
+  }
+
+  .section-restaurants {
+    width: 100%;
+    margin: 0rem;
+    border-radius: 0px;
+  }
+  .section-restaurants .section-titre {
+    padding: 3rem 0 0 10rem;
+  }
+  .section-restaurants .container-restaurants {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: relative;
+  }
+  .section-restaurants .diapos-restaurants {
+    margin: 0.5rem 1rem 3rem 1rem;
+  }
+  .section-restaurants .contenu-restaurants .rest-img {
+    width: 20vw;
+    height: 10vw;
+    min-width: 10vw;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .explore-section {
+    height: 20vh;
+  }
+  .explore-section .explore-texte {
+    margin: 0 0 3rem 0;
+  }
+
+  .fct-section {
+    flex-direction: inherit;
+    align-items: center;
+  }
+
+  .fct-container {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 0 0;
+  }
+  .fct-container .fct-titre {
+    padding: 3rem 0 1rem 7rem;
+    text-align: center;
+  }
+  .fct-container .btns {
+    display: flex;
+    margin: 1rem 5rem 1rem 5rem;
+  }
+  .fct-container .btn1 {
+    padding: 0 2rem 0 0;
+    margin: 1rem 2.5rem 1rem 1rem;
+  }
+  .fct-container .btn2 {
+    padding: 0 3rem 0 0;
+    margin: 1rem 2.5rem 1rem 1rem;
+  }
+  .fct-container .btn3 {
+    padding: 0 3rem 0 0;
+    margin: 1rem 2.5rem 1rem 1rem;
+  }
+
+  .section-restaurants {
+    width: 100%;
+    margin: 0rem;
+    border-radius: 0px;
+  }
+  .section-restaurants .section-titre {
+    padding: 3rem 0 0 10rem;
+  }
+  .section-restaurants .container-restaurants {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: relative;
+  }
+  .section-restaurants .diapos-restaurants {
+    margin: 0.5rem 1rem 3rem 1rem;
+  }
+  .section-restaurants .contenu-restaurants .rest-img {
+    width: 20vw;
+    height: 10vw;
+    min-width: 10vw;
+  }
+}
 /*************************************
 En tête des restaurants
 *************************************/
@@ -509,21 +677,198 @@ Bouton commander
   border: transparent;
 }
 
+/*@media all and (min-width: 1547px) and (max-width: 1892px)
+{*/
+/* .container-restaurants{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}*/
+/*// X-Small devices (portrait phones, less than 576px)
+@media /*(max-width: 575.98px)
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) 
+
+/// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px)*/
+@media screen and (min-width: 991.98px) {
+  .fct-section .fct-titre {
+    padding: 3rem 0 1rem 7rem;
+  }
+
+  .fct-container .btns {
+    margin: 1rem 20rem 1rem 20rem;
+  }
+
+  .section-restaurants {
+    width: 100%;
+    background-color: #f2f2f2f2;
+    margin: 3rem;
+  }
+  .section-restaurants .section-titre {
+    padding: 3rem 0 0 7rem;
+  }
+  .section-restaurants .container-restaurants {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: relative;
+  }
+  .section-restaurants .diapos-restaurants {
+    margin: 0.5rem 1rem 3rem 1rem;
+  }
+  .section-restaurants .contenu-restaurants .rest-img {
+    width: 40vw;
+    height: 20vw;
+    min-width: 10vw;
+  }
+}
+/*/ X-Large devices (large desktops, less than 1400px)*/
+@media screen and (min-width: 1300px) {
+  .explore-section {
+    height: 20vh;
+  }
+  .explore-section .explore-texte {
+    margin: 0 0 3rem 0;
+  }
+
+  .fct-section {
+    flex-direction: inherit;
+    align-items: center;
+  }
+
+  .fct-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 0;
+  }
+  .fct-container .fct-titre {
+    padding: 1rem 0 1rem 0rem;
+    text-align: center;
+  }
+  .fct-container .btns {
+    display: flex;
+    margin: 1rem 5rem 1rem 5rem;
+  }
+  .fct-container .btn1 {
+    padding: 0 2rem 0 0;
+    margin: 1rem 2.5rem 1rem 1rem;
+  }
+  .fct-container .btn2 {
+    padding: 0 3rem 0 0;
+    margin: 1rem 2.5rem 1rem 1rem;
+  }
+  .fct-container .btn3 {
+    padding: 0 3rem 0 0;
+    margin: 1rem 2.5rem 1rem 1rem;
+  }
+
+  .section-restaurants {
+    width: 100%;
+    margin: 0rem;
+    border-radius: 0px;
+  }
+  .section-restaurants .section-titre {
+    padding: 3rem 0 0 10rem;
+  }
+  .section-restaurants .container-restaurants {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: relative;
+  }
+  .section-restaurants .diapos-restaurants {
+    margin: 0.5rem 1rem 3rem 1rem;
+  }
+  .section-restaurants .contenu-restaurants .rest-img {
+    width: 20vw;
+    height: 10vw;
+    min-width: 10vw;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .explore-section {
+    height: 20vh;
+  }
+  .explore-section .explore-texte {
+    margin: 0 0 3rem 0;
+  }
+
+  .fct-section {
+    flex-direction: inherit;
+    align-items: center;
+  }
+
+  .fct-container {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 0 0;
+  }
+  .fct-container .fct-titre {
+    padding: 3rem 0 1rem 7rem;
+    text-align: center;
+  }
+  .fct-container .btns {
+    display: flex;
+    margin: 1rem 5rem 1rem 5rem;
+  }
+  .fct-container .btn1 {
+    padding: 0 2rem 0 0;
+    margin: 1rem 2.5rem 1rem 1rem;
+  }
+  .fct-container .btn2 {
+    padding: 0 3rem 0 0;
+    margin: 1rem 2.5rem 1rem 1rem;
+  }
+  .fct-container .btn3 {
+    padding: 0 3rem 0 0;
+    margin: 1rem 2.5rem 1rem 1rem;
+  }
+
+  .section-restaurants {
+    width: 100%;
+    margin: 0rem;
+    border-radius: 0px;
+  }
+  .section-restaurants .section-titre {
+    padding: 3rem 0 0 10rem;
+  }
+  .section-restaurants .container-restaurants {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: relative;
+  }
+  .section-restaurants .diapos-restaurants {
+    margin: 0.5rem 1rem 3rem 1rem;
+  }
+  .section-restaurants .contenu-restaurants .rest-img {
+    width: 20vw;
+    height: 10vw;
+    min-width: 10vw;
+  }
+}
 * {
   margin: 0;
   padding: 0;
 }
 
 header {
+  box-shadow: 0.2rem 0.2rem 1rem;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  z-index: 1000;
   font-family: "Shrikhand", Roboto;
   width: 100%;
 }
 
-/*main
-{
-    @extend %main-menus;
-    @extend %header-menus;
-}*/
+main {
+  height: auto;
+}
+
 section {
   display: block;
 }
@@ -540,6 +885,42 @@ h1, h2, h3, h4 {
 
 p {
   font-family: "Roboto", sans-serif;
+}
+
+/*******************************************
+Positionnement du site en milieu de page
+*******************************************/
+html, body, header, main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+header {
+  max-width: 1950px;
+}
+
+main {
+  max-width: 1950px;
+}
+
+.contenu {
+  height: auto;
+}
+
+.footer {
+  max-width: 1950px;
+}
+
+footer {
+  display: inline-table;
+  position: relative;
+  width: inherit;
+  height: 1px;
 }
 
 /***********************************
