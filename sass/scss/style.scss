@@ -64,69 +64,45 @@ p
 Positionnement du site en milieu de page
 *******************************************/
 
-html, body, header, main
+html, header, main, body
 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    align-content: center;
+    text-align: left;
     width: 100%;
     height: auto;
     margin: 0;
 
 }
 
+/*body
+{
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    align-content: center;
+}*/
+
 header
 {
-    max-width: 1950px;
+    max-width: 1715px;
 }
+
+/*img
+{
+    max-width: 1950px;
+}*/
 
 main
 {
-    max-width: 1950px;
-}
-
-.contenu
-{
-    height: auto;
+    max-width: 1715px;
 }
 
 .footer
 {
-    max-width: 1950px;
+    max-width: 1715px;
 }
-
-footer
-{
-    display:inline-table;
-    position: relative;
-    width: inherit;
-    height: 1px;
-}
-
-/***********************************
-Menu à la française
-***********************************/
-
-/*.francais
-{
-    width: 100%;
-    height: 50vw;
-    object-fit: cover;
-    
-}*/
-
-
-
-/*.section-entrees
-{
-    @include anim-menus;
-    overflow: hidden;
-    transform: scale(0);
-    cursor: pointer;
-}*/
-
-
 
 
 .entrees:hover
