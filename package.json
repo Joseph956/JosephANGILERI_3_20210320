@@ -9,7 +9,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "sass": "sass --watch /sass/scss/style.scss:/sass/css/style.css"
+    "sass": "sass --watch ./sass/scss/:./sass/css/"
   },
 
   "repository": {
