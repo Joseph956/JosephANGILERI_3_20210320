@@ -1,6 +1,11 @@
 /*************************************
 En tête des restaurants
 *************************************/
+header .page
+{
+    max-width: 2000px;
+}
+
 .logo-menus
 {
     @extend %flex-center;
@@ -37,8 +42,8 @@ Titre du menus et bouton "j'aime"
 {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    width: 95%;
+    align-items: end;
+    width: 90%;
 
     .cartes-titre {
         width: 100%;
@@ -49,10 +54,11 @@ Titre du menus et bouton "j'aime"
     .coeur {
         width: 20%;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: flex-end;
         font-size: 1.3rem;
-        margin-top: 25px;
-        &.icon {
+        margin-top: 30px;
+        
+        .icon {
             display: flex;
            
         }
@@ -90,6 +96,9 @@ Section menus
     }
 }
 
+/*****************************************
+Container des menus
+*****************************************/
 .container
 {
     @extend %flex-container-menus;
@@ -97,44 +106,33 @@ Section menus
     overflow: hidden;
     padding: 0.5rem 1rem;
     cursor: pointer;
-}
 
+    .menus-header {
+        flex: 1;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
 
-
-/*****************************************
-Container des menus
-*****************************************/
-/*.header
-{
-   text-align: left;
-}*/
-
-.menus-header
-{
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-
-    .menus-titre {
+         .menus-titre {
         font-weight: inherit;
         font-size: 1rem;
         text-overflow: ellipsis;
         overflow: hidden;
-    }
+        }
 
-    .menus-description {
+         .menus-description {
         font-size: 1rem;
         text-overflow: ellipsis;
         overflow: hidden;
+        }
     }
+
+    .menus-prix {
+        @extend %flex-prix-menus;
+        @include menus-prix; 
+        font-weight: bold;
+    }   
 }
-
-.menus-prix {
-    @extend %flex-prix-menus;
-    @include menus-prix; 
-    font-weight: bold;
-    }
-
 /*************************************
 Bouton commander
 *************************************/
@@ -142,7 +140,7 @@ Bouton commander
 {
     font-size: 1rem;
     padding: 1rem 5rem;
-    margin: 3rem 3rem 5rem 4rem;
+    margin: 3rem 3rem 5rem 3rem;
     border-radius: 100px;
     color: white;
     border: #9356DC;

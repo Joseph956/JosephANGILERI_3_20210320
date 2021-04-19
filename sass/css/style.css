@@ -72,6 +72,7 @@ header, .carte-restaurant {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
 }
 
 #logo {
@@ -94,7 +95,7 @@ header, .carte-restaurant {
   /*align-items: center;*/
 }
 
-.menus-prix {
+.container .menus-prix {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -127,7 +128,7 @@ Exploration des restaurants
 .explore-section {
   background-color: #f3f2f2f2;
   width: 100%;
-  height: 55vh;
+  height: 30vh;
   justify-content: center;
   text-align: center;
   padding: 1.2rem 0 0 0;
@@ -140,7 +141,7 @@ Exploration des restaurants
 }
 .explore-section .explore-texte {
   font-size: 1.1rem;
-  margin: 0 0 5rem 0;
+  margin: 0 0 3rem 0;
 }
 .explore-section .explore {
   font-size: 1rem;
@@ -162,15 +163,18 @@ Exploration des restaurants
 .fct-section {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 .fct-section .fct-titre {
-  padding: 3rem 0 1rem 1rem;
+  padding: 3rem 0rem 1rem 0rem;
+  text-align: center;
   font-size: 1.5rem;
 }
 
 .fct-container {
   background-color: white;
   margin: 0 0 3rem 0;
+  width: 100%;
 }
 .fct-container .btns {
   list-style: none;
@@ -264,7 +268,7 @@ Exploration des restaurants
 }
 .fct-container .btn-descpt {
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: black;
 }
 
@@ -289,6 +293,9 @@ Section restaurants
   font-style: normal;
   font-weight: normal;
 }
+.section-restaurants .container-restaurants {
+  /*max-width: 1280px;*/
+}
 .section-restaurants .diapos-restaurants {
   border-radius: 15px;
   background-color: white;
@@ -301,7 +308,7 @@ Section restaurants
 .section-restaurants .contenu-restaurants .rest-img {
   width: 90vw;
   height: 60vw;
-  min-width: 90vw;
+  min-width: 35vw;
   object-fit: cover;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -375,21 +382,50 @@ Footer
 /***********************************************************************
 Page d'accueil des restaurants
 ***********************************************************************/
-/*// X-Small devices (portrait phones, less than 576px)
-@media /*(max-width: 575.98px)
-
-// Small devices (landscape phones, less than 768px)
-@media (max-width: 767.98px) 
-
-/// Medium devices (tablets, less than 992px)
-@media (max-width: 991.98px)*/
-@media screen and (min-width: 991.98px) {
-  .fct-section .fct-titre {
-    padding: 3rem 0 1rem 7rem;
+@media screen and (min-width: 280px) and (max-width: 767.98px) {
+  .explore-section {
+    height: 20vh;
+  }
+  .explore-section .explore-texte {
+    margin: 0 0 3rem 0;
+  }
+}
+@media screen and (min-width: 767.98px) and (max-width: 1200px) {
+  .explore-section {
+    height: 20vh;
+  }
+  .explore-section .explore-texte {
+    margin: 0 0 3rem 0;
   }
 
-  .fct-container .btns {
-    margin: 1rem 20rem 1rem 20rem;
+  .fct-section .fct-titre {
+    padding: 3rem 7rem 1rem 7rem;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
+/*@media (max-width: 991.98px)*/
+@media screen and (min-width: 1200px) and (max-width: 1600px) {
+  .explore-section {
+    height: 20vh;
+  }
+  .explore-section .explore-texte {
+    margin: 0 0 3rem 0;
+  }
+
+  .fct-section .fct-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 0;
+  }
+  .fct-section .fct-titre {
+    padding: 3rem 7rem 1rem 7rem;
+    text-align: center;
+  }
+  .fct-section .btns {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem 10rem 1rem 10rem;
   }
 
   .section-restaurants {
@@ -398,7 +434,7 @@ Page d'accueil des restaurants
     margin: 3rem;
   }
   .section-restaurants .section-titre {
-    padding: 3rem 0 0 7rem;
+    padding: 3rem 0 0 11rem;
   }
   .section-restaurants .container-restaurants {
     display: flex;
@@ -410,13 +446,12 @@ Page d'accueil des restaurants
     margin: 0.5rem 1rem 3rem 1rem;
   }
   .section-restaurants .contenu-restaurants .rest-img {
-    width: 40vw;
-    height: 20vw;
-    min-width: 10vw;
+    width: 35vw;
+    height: 15vw;
   }
 }
 /*/ X-Large devices (large desktops, less than 1400px)*/
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1600px) and (max-width: 2000px) {
   .explore-section {
     height: 20vh;
   }
@@ -428,19 +463,20 @@ Page d'accueil des restaurants
     flex-direction: inherit;
     align-items: center;
   }
+  .fct-section .fct-titre {
+    padding: 3rem 7rem 1rem 7rem;
+    text-align: center;
+  }
 
   .fct-container {
     display: flex;
     flex-direction: column;
     margin: 0 0 0 0;
   }
-  .fct-container .fct-titre {
-    padding: 1rem 0 1rem 0rem;
-    text-align: center;
-  }
   .fct-container .btns {
     display: flex;
-    margin: 1rem 0rem 1rem 0rem;
+    justify-content: space-evenly;
+    margin: 1rem 3rem 1rem 6rem;
   }
   .fct-container .btn1 {
     padding: 0 2rem 0 0;
@@ -461,7 +497,7 @@ Page d'accueil des restaurants
     border-radius: 0px;
   }
   .section-restaurants .section-titre {
-    padding: 3rem 0 0 10rem;
+    padding: 3rem 0 0 15rem;
   }
   .section-restaurants .container-restaurants {
     display: flex;
@@ -475,7 +511,6 @@ Page d'accueil des restaurants
   .section-restaurants .contenu-restaurants .rest-img {
     width: 35vw;
     height: 15vw;
-    min-width: 10vw;
   }
 }
 /*/ X-Large devices (large desktops, less than 1400px)*/
@@ -491,19 +526,20 @@ Page d'accueil des restaurants
     flex-direction: inherit;
     align-items: center;
   }
+  .fct-section .fct-titre {
+    padding: 3rem 7rem 1rem 7rem;
+    text-align: center;
+  }
 
   .fct-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin: 0 0 0 0;
-  }
-  .fct-container .fct-titre {
-    padding: 3rem 0 1rem 7rem;
-    text-align: center;
   }
   .fct-container .btns {
     display: flex;
-    margin: 1rem 5rem 1rem 5rem;
+    margin: 1rem 5rem 1rem 8rem;
+    justify-content: space-evenly;
   }
   .fct-container .btn1 {
     padding: 0 2rem 0 0;
@@ -524,7 +560,7 @@ Page d'accueil des restaurants
     border-radius: 0px;
   }
   .section-restaurants .section-titre {
-    padding: 3rem 0 0 10rem;
+    padding: 3rem 0 0 27rem;
   }
   .section-restaurants .container-restaurants {
     display: flex;
@@ -536,53 +572,100 @@ Page d'accueil des restaurants
     margin: 0.5rem 1rem 3rem 1rem;
   }
   .section-restaurants .contenu-restaurants .rest-img {
-    width: 25vw;
+    width: 35vw;
     height: 15vw;
-    min-width: 10vw;
   }
 }
 /***********************************************************************
 Pages des cartes des restaurants
 ***********************************************************************/
-@media screen and (min-width: 1200px) {
-  main {
-    max-width: 768px;
-  }
-
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .img-menus {
-    height: 30vw;
+    height: 50vw;
+    object-position: center;
   }
 
   .carte-restaurant {
-    margin-top: -10.8rem;
-    background-color: #f2f2f2;
-    border-radius: 4rem 4rem 0 0;
+    width: 100%;
+    background-color: white;
+    margin-top: -6.8rem;
+    border-radius: 2rem 2rem 0 0;
   }
 }
-@media (min-width: 1400px) {
-  main {
-    max-width: 568px;
-  }
-
+@media screen and (min-width: 1024px) and (max-width: 1715px) {
   .img-menus {
-    height: 30vw;
+    height: 40vw;
+    object-position: center;
   }
 
   .carte-restaurant {
+    width: 100%;
+    background-color: white;
+    margin-top: -6.8rem;
+    border-radius: 2rem 2rem 0 0;
+  }
+  .carte-restaurant .entete .cartes-titre {
+    padding: 2rem 0 0 0.5rem;
+    text-align: center;
+  }
+  .carte-restaurant .entete .coeur {
+    justify-content: flex-end;
+    margin: 2.5rem 0;
+  }
+
+  .menus {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1715px) and (max-width: 3500px) {
+  .img-menus {
+    height: 40vw;
+    object-position: center;
+  }
+
+  .carte-restaurant {
+    width: 100%;
+    flex-direction: row;
     margin-top: -8.8rem;
-    background-color: #f2f2f2;
-    border-radius: 4rem 4rem 0 0;
+    background-color: white;
+    border-radius: 2rem 2rem 0 0;
+    max-width: 1715px;
+  }
+  .carte-restaurant .entete {
+    flex-direction: column;
+    align-items: end;
+    width: 90%;
+  }
+  .carte-restaurant .entete .cartes-titre {
+    padding: 3.5rem 0 0 0.5rem;
+    text-align: center;
+  }
+  .carte-restaurant .entete .coeur {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin: 25px 0 0 75px;
   }
 
   .menus {
     max-width: 100%;
     display: flex;
     flex-direction: row;
+    padding-bottom: 15px;
+  }
+
+  .cmd {
+    margin: 7rem 3rem 5rem 3rem;
   }
 }
 /*************************************
 En tête des restaurants
 *************************************/
+header .page {
+  max-width: 2000px;
+}
+
 .logo-menus {
   width: 100%;
 }
@@ -602,8 +685,8 @@ Titre du menus et bouton "j'aime"
 .entete {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 95%;
+  align-items: end;
+  width: 90%;
 }
 .entete .cartes-titre {
   width: 100%;
@@ -613,11 +696,11 @@ Titre du menus et bouton "j'aime"
 .entete .coeur {
   width: 20%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   font-size: 1.3rem;
-  margin-top: 25px;
+  margin-top: 30px;
 }
-.entete .coeur.icon {
+.entete .coeur .icon {
   display: flex;
 }
 
@@ -647,6 +730,9 @@ Section menus
   margin: 0.5rem 0 0 0;
 }
 
+/*****************************************
+Container des menus
+*****************************************/
 .container {
   border-radius: 0.9rem;
   box-shadow: 0.2rem 0.2rem 1rem;
@@ -657,34 +743,26 @@ Section menus
   padding: 0.5rem 1rem;
   cursor: pointer;
 }
-
-/*****************************************
-Container des menus
-*****************************************/
-/*.header
-{
-   text-align: left;
-}*/
-.menus-header {
+.container .menus-header {
+  flex: 1;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.menus-header .menus-titre {
+.container .menus-header .menus-titre {
   font-weight: inherit;
   font-size: 1rem;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.menus-header .menus-description {
+.container .menus-header .menus-description {
   font-size: 1rem;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-
-.menus-prix {
+.container .menus-prix {
   font-family: "roboto";
-  padding-bottom: 2px;
+  padding-bottom: 6px;
   padding-left: 0.5rem;
   font-weight: bold;
 }
@@ -695,7 +773,7 @@ Bouton commander
 .cmd {
   font-size: 1rem;
   padding: 1rem 5rem;
-  margin: 3rem 3rem 5rem 4rem;
+  margin: 3rem 3rem 5rem 3rem;
   border-radius: 100px;
   color: white;
   border: #9356DC;
@@ -716,21 +794,50 @@ Bouton commander
 /***********************************************************************
 Page d'accueil des restaurants
 ***********************************************************************/
-/*// X-Small devices (portrait phones, less than 576px)
-@media /*(max-width: 575.98px)
-
-// Small devices (landscape phones, less than 768px)
-@media (max-width: 767.98px) 
-
-/// Medium devices (tablets, less than 992px)
-@media (max-width: 991.98px)*/
-@media screen and (min-width: 991.98px) {
-  .fct-section .fct-titre {
-    padding: 3rem 0 1rem 7rem;
+@media screen and (min-width: 280px) and (max-width: 767.98px) {
+  .explore-section {
+    height: 20vh;
+  }
+  .explore-section .explore-texte {
+    margin: 0 0 3rem 0;
+  }
+}
+@media screen and (min-width: 767.98px) and (max-width: 1200px) {
+  .explore-section {
+    height: 20vh;
+  }
+  .explore-section .explore-texte {
+    margin: 0 0 3rem 0;
   }
 
-  .fct-container .btns {
-    margin: 1rem 20rem 1rem 20rem;
+  .fct-section .fct-titre {
+    padding: 3rem 7rem 1rem 7rem;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
+/*@media (max-width: 991.98px)*/
+@media screen and (min-width: 1200px) and (max-width: 1600px) {
+  .explore-section {
+    height: 20vh;
+  }
+  .explore-section .explore-texte {
+    margin: 0 0 3rem 0;
+  }
+
+  .fct-section .fct-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 0;
+  }
+  .fct-section .fct-titre {
+    padding: 3rem 7rem 1rem 7rem;
+    text-align: center;
+  }
+  .fct-section .btns {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem 10rem 1rem 10rem;
   }
 
   .section-restaurants {
@@ -739,7 +846,7 @@ Page d'accueil des restaurants
     margin: 3rem;
   }
   .section-restaurants .section-titre {
-    padding: 3rem 0 0 7rem;
+    padding: 3rem 0 0 11rem;
   }
   .section-restaurants .container-restaurants {
     display: flex;
@@ -751,13 +858,12 @@ Page d'accueil des restaurants
     margin: 0.5rem 1rem 3rem 1rem;
   }
   .section-restaurants .contenu-restaurants .rest-img {
-    width: 40vw;
-    height: 20vw;
-    min-width: 10vw;
+    width: 35vw;
+    height: 15vw;
   }
 }
 /*/ X-Large devices (large desktops, less than 1400px)*/
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1600px) and (max-width: 2000px) {
   .explore-section {
     height: 20vh;
   }
@@ -769,19 +875,20 @@ Page d'accueil des restaurants
     flex-direction: inherit;
     align-items: center;
   }
+  .fct-section .fct-titre {
+    padding: 3rem 7rem 1rem 7rem;
+    text-align: center;
+  }
 
   .fct-container {
     display: flex;
     flex-direction: column;
     margin: 0 0 0 0;
   }
-  .fct-container .fct-titre {
-    padding: 1rem 0 1rem 0rem;
-    text-align: center;
-  }
   .fct-container .btns {
     display: flex;
-    margin: 1rem 0rem 1rem 0rem;
+    justify-content: space-evenly;
+    margin: 1rem 3rem 1rem 6rem;
   }
   .fct-container .btn1 {
     padding: 0 2rem 0 0;
@@ -802,7 +909,7 @@ Page d'accueil des restaurants
     border-radius: 0px;
   }
   .section-restaurants .section-titre {
-    padding: 3rem 0 0 10rem;
+    padding: 3rem 0 0 15rem;
   }
   .section-restaurants .container-restaurants {
     display: flex;
@@ -816,7 +923,6 @@ Page d'accueil des restaurants
   .section-restaurants .contenu-restaurants .rest-img {
     width: 35vw;
     height: 15vw;
-    min-width: 10vw;
   }
 }
 /*/ X-Large devices (large desktops, less than 1400px)*/
@@ -832,19 +938,20 @@ Page d'accueil des restaurants
     flex-direction: inherit;
     align-items: center;
   }
+  .fct-section .fct-titre {
+    padding: 3rem 7rem 1rem 7rem;
+    text-align: center;
+  }
 
   .fct-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin: 0 0 0 0;
-  }
-  .fct-container .fct-titre {
-    padding: 3rem 0 1rem 7rem;
-    text-align: center;
   }
   .fct-container .btns {
     display: flex;
-    margin: 1rem 5rem 1rem 5rem;
+    margin: 1rem 5rem 1rem 8rem;
+    justify-content: space-evenly;
   }
   .fct-container .btn1 {
     padding: 0 2rem 0 0;
@@ -865,7 +972,7 @@ Page d'accueil des restaurants
     border-radius: 0px;
   }
   .section-restaurants .section-titre {
-    padding: 3rem 0 0 10rem;
+    padding: 3rem 0 0 27rem;
   }
   .section-restaurants .container-restaurants {
     display: flex;
@@ -877,48 +984,91 @@ Page d'accueil des restaurants
     margin: 0.5rem 1rem 3rem 1rem;
   }
   .section-restaurants .contenu-restaurants .rest-img {
-    width: 25vw;
+    width: 35vw;
     height: 15vw;
-    min-width: 10vw;
   }
 }
 /***********************************************************************
 Pages des cartes des restaurants
 ***********************************************************************/
-@media screen and (min-width: 1200px) {
-  main {
-    max-width: 768px;
-  }
-
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .img-menus {
-    height: 30vw;
+    height: 50vw;
+    object-position: center;
   }
 
   .carte-restaurant {
-    margin-top: -10.8rem;
-    background-color: #f2f2f2;
-    border-radius: 4rem 4rem 0 0;
+    width: 100%;
+    background-color: white;
+    margin-top: -6.8rem;
+    border-radius: 2rem 2rem 0 0;
   }
 }
-@media (min-width: 1400px) {
-  main {
-    max-width: 568px;
-  }
-
+@media screen and (min-width: 1024px) and (max-width: 1715px) {
   .img-menus {
-    height: 30vw;
+    height: 40vw;
+    object-position: center;
   }
 
   .carte-restaurant {
+    width: 100%;
+    background-color: white;
+    margin-top: -6.8rem;
+    border-radius: 2rem 2rem 0 0;
+  }
+  .carte-restaurant .entete .cartes-titre {
+    padding: 2rem 0 0 0.5rem;
+    text-align: center;
+  }
+  .carte-restaurant .entete .coeur {
+    justify-content: flex-end;
+    margin: 2.5rem 0;
+  }
+
+  .menus {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1715px) and (max-width: 3500px) {
+  .img-menus {
+    height: 40vw;
+    object-position: center;
+  }
+
+  .carte-restaurant {
+    width: 100%;
+    flex-direction: row;
     margin-top: -8.8rem;
-    background-color: #f2f2f2;
-    border-radius: 4rem 4rem 0 0;
+    background-color: white;
+    border-radius: 2rem 2rem 0 0;
+    max-width: 1715px;
+  }
+  .carte-restaurant .entete {
+    flex-direction: column;
+    align-items: end;
+    width: 90%;
+  }
+  .carte-restaurant .entete .cartes-titre {
+    padding: 3.5rem 0 0 0.5rem;
+    text-align: center;
+  }
+  .carte-restaurant .entete .coeur {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin: 25px 0 0 75px;
   }
 
   .menus {
     max-width: 100%;
     display: flex;
     flex-direction: row;
+    padding-bottom: 15px;
+  }
+
+  .cmd {
+    margin: 7rem 3rem 5rem 3rem;
   }
 }
 * {
@@ -967,28 +1117,10 @@ html, header, main, body {
   flex-direction: column;
   align-items: center;
   text-align: left;
+  background-color: #f2f2f2;
   width: 100%;
   height: auto;
   margin: 0;
-}
-
-/*body
-{
-    width: 100%;
-    height: 100vh;
-    margin: auto;
-    align-content: center;
-}*/
-header {
-  max-width: 1715px;
-}
-
-/*img
-{
-    max-width: 1950px;
-}*/
-main {
-  max-width: 1715px;
 }
 
 .footer {

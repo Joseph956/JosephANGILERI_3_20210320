@@ -24,7 +24,7 @@ Exploration des restaurants
 {
     background-color: #f3f2f2f2;
     width: 100%;
-    height: 55vh;
+    height: 30vh;
     justify-content: center;
     text-align: center;
     padding: 1.2rem 0 0 0;
@@ -40,7 +40,7 @@ Exploration des restaurants
     .explore-texte
     {
         font-size: 1.1rem;
-        margin: 0 0 5rem 0;
+        margin: 0 0 3rem 0;
     }
 
     .explore
@@ -67,10 +67,12 @@ Exploration des restaurants
 {
     display: flex;
     flex-direction: column;
+    width: 100%;
 
     .fct-titre
     {
-        padding: 3rem 0 1rem 1rem;
+        padding: 3rem 0rem 1rem 0rem;
+        text-align: center;
         font-size: 1.5rem;
     }
 }
@@ -79,6 +81,7 @@ Exploration des restaurants
 {
     background-color: white;
     margin: 0 0 3rem 0;
+    width: 100%;
        
     .btns
     {
@@ -126,7 +129,7 @@ Exploration des restaurants
 
     .btn-descpt {
         text-decoration: none;
-        font-size: 1.3rem;
+        font-size: 1rem;
         color: black;
     }
 }
@@ -156,7 +159,8 @@ Section restaurants
     }
 
     .container-restaurants {
-        @extend %flex-container
+        @extend %flex-container;
+        /*max-width: 1280px;*/
     }
     
     .diapos-restaurants {
@@ -173,7 +177,7 @@ Section restaurants
     .contenu-restaurants .rest-img {
         width: 90vw;
         height: 60vw;
-        min-width: 90vw;
+        min-width: 35vw;
         object-fit: cover;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
