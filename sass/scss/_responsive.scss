@@ -29,9 +29,9 @@ Page d'accueil des restaurants
     .fct-section {
 
         .fct-titre {
-        padding: 3rem 7rem 1rem 7rem;
-        text-align: center;
-        font-size: 1.5rem;
+        padding: 3rem 7rem 1rem 1rem;
+        text-align: left;
+        font-size: 2rem;
         }
     }
     
@@ -53,41 +53,81 @@ Page d'accueil des restaurants
     }    
     
     .fct-section {
-
-        .fct-container {
-            display: flex;
-            flex-direction: column;
-            margin: 0 0 0 0;
-        }
+        display: block;
+        align-items: center;
+        width: 100%;
 
         .fct-titre {
-        padding: 3rem 7rem 1rem 7rem;
-        text-align: center;
-        }
-
-        .btns {
-            display: flex;
-            justify-content: space-evenly;
-            margin: 1rem 10rem 1rem 10rem;
+            padding: 3rem 7rem 1rem 7rem;
+            text-align: center;
         }
     }
-       
-       
+
+        .fct-container {
+            display: contents;
+            flex-direction: column;
+            margin: 0 0 0 0;
+
+            .btns {
+                display: flex;
+                justify-content: space-evenly;
+                margin: 0rem 0rem 1rem 0rem;
+                padding: 0 0 0 3rem;
+            }
+
+            .btn1 {
+                padding: 0 2rem 0 0;
+                margin: 1rem 2.5rem 1rem 1rem;
+            }
+    
+            .btn2 {
+                padding: 0 3rem 0 0;
+                margin: 1rem 2.5rem 1rem 1rem;
+            }
+    
+            .btn3 {
+                padding: 0 3rem 0 0;
+                margin: 1rem 2.5rem 1rem 1rem;
+            }
+        }
+
     .section-restaurants {
-        width: 100%;
+        width: 75%;
         background-color: #f2f2f2f2;
         margin: 3rem;
 
         .section-titre {
-            padding: 3rem 0 0 11rem;
+            padding: 3rem 0 0 2rem;
         }
 
         .container-restaurants {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 100px 1fr 1fr;
+            grid-column-gap: 2rem;
+            grid-row-gap: 2rem;
+
         }
+
+        .contenu-restaurants {
+            grid-row-start: 2 span;
+            }
+
+            .diapos1 {
+                grid-row-start: 2;
+            }
+
+            .diapos2 {
+                grid-row-start: 2;
+            }
+
+            .diapos3 {
+                grid-row-start: 3;
+            }
+
+            .diapos4 {
+                grid-row-start: 5;
+            }
 
         .diapos-restaurants {
             margin: 0.5rem 1rem 3rem 1rem;
@@ -113,8 +153,9 @@ Page d'accueil des restaurants
     }
         
     .fct-section {
-        flex-direction: inherit;
+        display: block;
         align-items: center;
+        width: 100%;
 
         .fct-titre {
             padding: 3rem 7rem 1rem 7rem;
@@ -123,14 +164,15 @@ Page d'accueil des restaurants
     }
        
     .fct-container {
-        display: flex;
+        display: contents;
         flex-direction: column;
         margin: 0 0 0 0;        
 
         .btns {
            display: flex;
            justify-content: space-evenly;
-           margin: 1rem 3rem 1rem 6rem;
+           margin: 0rem 0rem 1rem 0rem;
+           padding: 0 0 0 3rem;
         }
 
         .btn1 {
@@ -151,23 +193,44 @@ Page d'accueil des restaurants
       
     .section-restaurants 
     {
-        width: 100%;
+        width: 75%;
         margin: 0rem;
         border-radius: 0px;
 
         .section-titre {
-            padding: 3rem 0 0 15rem;
+            padding: 3rem 0 0 2rem;
         }
 
         .container-restaurants {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 100px 1fr 1fr;
+            grid-column-gap: 2rem;
+            grid-row-gap: 2rem;
         }
 
+        .contenu-restaurants {
+            grid-row-start: 2 span;
+            }
+
+            .diapos1 {
+                grid-row-start: 2;
+            }
+
+            .diapos2 {
+                grid-row-start: 2;
+            }
+
+            .diapos3 {
+                grid-row-start: 3;
+            }
+
+            .diapos4 {
+                grid-row-start: 5;
+            }
+
         .diapos-restaurants {
-           margin: 0.5rem 1rem 3rem 1rem;
+            margin: 0.5rem 1rem 3rem 1rem;
         }
 
         .contenu-restaurants .rest-img {
@@ -189,8 +252,9 @@ Page d'accueil des restaurants
     }
         
     .fct-section {
-        flex-direction: inherit;
+        display: block;
         align-items: center;
+        width: 100%;
 
         .fct-titre {
             padding: 3rem 7rem 1rem 7rem;
@@ -199,13 +263,14 @@ Page d'accueil des restaurants
     }
        
     .fct-container {
-        display: flex;
+        display: contents;
         flex-direction: column;
         margin: 0 0 0 0;
        
         .btns {
             display: flex;
-            margin: 1rem 5rem 1rem 8rem;
+            margin: 0rem 0rem 1rem 0rem;
+            padding: 0 0 0 3rem;
             justify-content: space-evenly;
         }
 
@@ -227,29 +292,61 @@ Page d'accueil des restaurants
       
     .section-restaurants 
     {
-        width: 100%;
+        width: 70%;
         margin: 0rem;
         border-radius: 0px;
 
         .section-titre {
-            padding: 3rem 0 0 27rem;
+            padding: 3rem 0 0 2rem;
         }
+
+        .contenu-restaurants {
+            grid-row-start: 2 span;
+            }
+
+            .diapos1 {
+                grid-row-start: 2;
+            }
+
+            .diapos2 {
+                grid-row-start: 2;
+            }
+
+            .diapos3 {
+                grid-row-start: 3;
+            }
+
+            .diapos4 {
+                grid-row-start: 5;
+            }
+           
 
         .container-restaurants {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        position: relative;
-        }
-
-        .diapos-restaurants {
-            margin: 0.5rem 1rem 3rem 1rem;
-        }
-
-        .contenu-restaurants .rest-img {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 100px 1fr 1fr;
+            grid-column-gap: 2rem;
+            grid-row-gap: 2rem;
+            
+            .rest-img {
             width: 35vw;
             height: 15vw;
         }
+        
+        /*display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        position: relative;*/
+        }
+
+       
+
+        .diapos-restaurants {
+
+            margin: 0.5rem 1rem 3rem 1rem;
+        }
+
+        
     }
 }
 
@@ -357,4 +454,5 @@ Pages des cartes des restaurants
     .cmd {
         margin: 7rem 3rem 5rem 3rem;
     }
+
 }
