@@ -163,7 +163,12 @@ Section restaurants
 
     .container-restaurants {
         @extend %flex-container;
-        /*max-width: 1280px;*/
+        align-items: flex-start;
+        
+        .section-titre {
+            text-align: left;
+            padding: 0 0 0 1rem;
+        }
     }
     
     .diapos-restaurants {
