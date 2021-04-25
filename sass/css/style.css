@@ -8,19 +8,35 @@ Page d'accueil section fonctionnement
 /***************************************************************
 Page d'accueil section restaurants
 ***************************************************************/
-@keyframes spin {
+/*****************************************
+Pages des menus restaurants
+*****************************************/
+/*************************************
+Lodear spinner page d'accueil
+*************************************/
+@keyframes loader {
   100% {
     opacity: 0;
     z-index: -10;
-    transform: rotate(360deg);
   }
 }
-@keyframes loader-cerclecontainer {
+@keyframes popcorn {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(0.7rem);
+  }
+  75% {
+    transform: translateY(-0.7rem);
+  }
   100% {
-    opacity: 0;
-    z-index: -1000;
+    transform: translateY(0);
   }
 }
+/**************************************
+Apparition des menus en décalés
+**************************************/
 @keyframes ico-menus {
   0% {
     transform: scale(0);
@@ -76,9 +92,9 @@ header, .carte-restaurant {
 }
 
 #logo {
-  margin: 1rem;
+  margin: 1rem 0 1rem 2rem;
   border-radius: 0;
-  width: 10rem;
+  width: 12rem;
   position: relative;
 }
 
@@ -108,10 +124,16 @@ header, .carte-restaurant {
 }
 
 /***********************************
+header accueil
+***********************************/
+.header-accueil {
+  text-align: center;
+}
+
+/***********************************
 Section ville
 ***********************************/
 .ville-section {
-  padding: 1rem 0 1rem 0;
   font-size: 1.2rem;
   background-color: #dbdadaf2;
   width: 100%;
@@ -119,7 +141,11 @@ Section ville
   justify-content: center;
 }
 .ville-section .mappy {
-  padding: 0 1rem 0 0;
+  padding: 1rem;
+}
+.ville-section .mappy-description {
+  font-size: 1.2rem;
+  padding: 1rem 0;
 }
 
 /************************************
@@ -341,12 +367,79 @@ Section restaurants
   color: black;
   padding: 0rem 1rem;
 }
-.icon-coeur .coeur {
+.icon-coeur .btn-coeur {
   width: 15%;
   margin-top: 15px;
+  background-color: transparent;
+  border: 0 solid transparent;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.icon-coeur .coeur .fas {
-  font-size: 1.5rem;
+.icon-coeur .btn-menu {
+  height: 2rem;
+  background-color: transparent;
+  border: 0 solid transparent;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  background-color: #000;
+}
+.icon-coeur .btn-menu::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.icon-coeur .btn-menu:hover::before {
+  opacity: 1;
+}
+.icon-coeur .btn-menu::before {
+  opacity: 0;
+  transition: 0.5s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
+}
+.icon-coeur .icon {
+  font-size: 1.8rem;
+  transition-duration: 0.25s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: lighten;
+  background-color: white;
+}
+.icon-coeur .icon-j-aime {
+  font-size: 1.8rem;
+  transition-duration: 0.25s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: lighten;
+  background-color: white;
+}
+.icon-coeur .btn-menu:hover .icon-j-aime {
+  opacity: 0;
 }
 
 /********************************
@@ -370,7 +463,6 @@ Footer
   text-decoration: none;
   font-family: "Shrikhand", Roboto;
   font-size: inherit;
-  /* font-style: italic;*/
 }
 .footer-menus .footer-liens {
   padding: 0.2rem;
@@ -706,6 +798,7 @@ Pages des cartes des restaurants
 }
 @media screen and (min-width: 1715px) and (max-width: 3500px) {
   .img-menus {
+    width: 100%;
     height: 40vw;
     object-position: center;
   }
@@ -713,6 +806,7 @@ Pages des cartes des restaurants
   .carte-restaurant {
     width: 100%;
     flex-direction: row;
+    position: relative;
     margin-top: -8.8rem;
     background-color: white;
     border-radius: 2rem 2rem 0 0;
@@ -720,19 +814,20 @@ Pages des cartes des restaurants
   }
   .carte-restaurant .entete {
     flex-direction: column;
-    align-items: end;
-    width: 90%;
+    width: auto;
   }
   .carte-restaurant .entete .cartes-titre {
     padding: 3.5rem 0 0 0.5rem;
     text-align: center;
+    font-size: 1.3rem;
+    margin: 0 1rem 0 0;
   }
-  .carte-restaurant .entete .coeur {
+  .carte-restaurant .entete .btn-coeur {
     width: 20%;
     display: flex;
     justify-content: center;
     font-size: 1.3rem;
-    margin: 25px 0 0 75px;
+    margin: 1rem auto;
   }
 
   .menus {
@@ -743,7 +838,7 @@ Pages des cartes des restaurants
   }
 
   .cmd {
-    margin: 7rem 3rem 5rem 3rem;
+    margin: 7rem 1.5rem 5rem 1.5rem;
   }
 }
 /*************************************
@@ -773,22 +868,80 @@ Titre du menus et bouton "j'aime"
   display: flex;
   justify-content: space-between;
   align-items: end;
-  width: 90%;
+  width: 95%;
 }
 .entete .cartes-titre {
   width: 100%;
   font-size: 1.4rem;
   padding: 1.5rem 0 0 1.5rem;
 }
-.entete .coeur {
+.entete .btn-coeur {
   width: 20%;
   display: flex;
   justify-content: flex-end;
   font-size: 1.3rem;
   margin-top: 30px;
 }
-.entete .coeur .icon {
+.entete .btn-menu {
+  width: 2rem;
+  height: 2rem;
+  border: 0 solid transparent;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  background-color: #000;
+}
+.entete .btn-menu::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.entete .btn-menu:hover::before {
+  opacity: 1;
+}
+.entete .btn-menu::before {
+  opacity: 0;
+  transition: 0.5s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
+}
+.entete .icon {
+  font-size: 1.8rem;
+  transition-duration: 0.25s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: lighten;
+  background-color: white;
+}
+.entete .icon-j-aime {
+  font-size: 1.8rem;
+  transition-duration: 0.25s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: lighten;
+  background-color: white;
+}
+.entete .btn-menu:hover .icon-j-aime {
+  opacity: 0;
 }
 
 /***************************************
@@ -823,26 +976,23 @@ Container des menus
 .container {
   border-radius: 0.9rem;
   box-shadow: 0.2rem 0.2rem 1rem;
-  margin: 1rem 0;
-  /* width: 98%;
-   max-width: 98%;*/
-  overflow: hidden;
   padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  overflow: hidden;
   cursor: pointer;
 }
 .container .menus-header {
   flex: 1;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
 }
-.container .menus-header .menus-titre {
+.container .menus-titre {
   font-weight: inherit;
   font-size: 1rem;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.container .menus-header .menus-description {
+.container .menus-description {
   font-size: 1rem;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -852,6 +1002,68 @@ Container des menus
   padding-bottom: 6px;
   padding-left: 0.5rem;
   font-weight: bold;
+}
+
+.entrees {
+  animation-delay: 0s;
+  animation: ico-menus 0.5s;
+  animation-fill-mode: both;
+  transform: scale(0);
+  max-width: 100%;
+}
+
+.plats {
+  animation-delay: 0.5s;
+  animation: ico-menus 1s;
+  animation-fill-mode: both;
+  transform: scale(0);
+  max-width: 100%;
+}
+
+.desserts {
+  animation-delay: 1s;
+  animation: ico-menus 1.5s;
+  animation-fill-mode: both;
+  transform: scale(0);
+  max-width: 100%;
+}
+
+.menus-choix {
+  width: 4rem;
+  height: 5rem;
+  margin: -1rem -5rem -1rem 1rem;
+  border-bottom-right-radius: 0.9rem;
+  border-top-right-radius: 0.9rem;
+  transition-duration: 0.5s;
+  background-color: #99e2d0;
+}
+
+.menus-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #fff;
+  border-radius: 100px;
+  transform: rotate(180deg);
+  transition-duration: 0.5s;
+  color: #99e2d0;
+  transform: rotate(360deg);
+  animation-fill-mode: both;
+  cursor: pointer;
+}
+.menus-icon .ico-menus {
+  transform: rotate(0);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.menu:hover {
+  animation-fill-mode: both;
+  transform: scale(0);
+  max-width: 100%;
+}
+.menu:hover .menus-choix {
+  margin-right: -1rem;
 }
 
 /*************************************
@@ -1201,6 +1413,7 @@ Pages des cartes des restaurants
 }
 @media screen and (min-width: 1715px) and (max-width: 3500px) {
   .img-menus {
+    width: 100%;
     height: 40vw;
     object-position: center;
   }
@@ -1208,6 +1421,7 @@ Pages des cartes des restaurants
   .carte-restaurant {
     width: 100%;
     flex-direction: row;
+    position: relative;
     margin-top: -8.8rem;
     background-color: white;
     border-radius: 2rem 2rem 0 0;
@@ -1215,19 +1429,20 @@ Pages des cartes des restaurants
   }
   .carte-restaurant .entete {
     flex-direction: column;
-    align-items: end;
-    width: 90%;
+    width: auto;
   }
   .carte-restaurant .entete .cartes-titre {
     padding: 3.5rem 0 0 0.5rem;
     text-align: center;
+    font-size: 1.3rem;
+    margin: 0 1rem 0 0;
   }
-  .carte-restaurant .entete .coeur {
+  .carte-restaurant .entete .btn-coeur {
     width: 20%;
     display: flex;
     justify-content: center;
     font-size: 1.3rem;
-    margin: 25px 0 0 75px;
+    margin: 1rem auto;
   }
 
   .menus {
@@ -1238,7 +1453,7 @@ Pages des cartes des restaurants
   }
 
   .cmd {
-    margin: 7rem 3rem 5rem 3rem;
+    margin: 7rem 1.5rem 5rem 1.5rem;
   }
 }
 * {
@@ -1251,7 +1466,6 @@ header {
   position: relative;
   width: 100%;
   text-align: center;
-  /*box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);*/
   z-index: 1000;
   font-family: "Shrikhand", Roboto;
   width: 100%;
@@ -1273,6 +1487,7 @@ h1, h2, h3, h4 {
   font-family: "Shrikhand", cursive;
   font-style: normal;
   font-weight: normal;
+  font-size: 1.5rem;
 }
 
 p {
@@ -1297,18 +1512,6 @@ html, header, main, body {
   max-width: 1715px;
 }
 
-.entrees:hover {
-  animation: ico-menus 0.6s;
-  animation-duration: 0.6s;
-  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: both;
-  animation-play-state: running;
-  animation-name: ico-menus;
-}
-
 /*&_.menus-header {        
     overflow: hidden;
     white-space: nowrap;
@@ -1324,45 +1527,46 @@ html, header, main, body {
  &_.menus-prix {
      @include menus-prix;
  }*/
-.entrees .menus-choix:hover {
-  margin-right: -1rem;
-  cursor: pointer;
-}
-
-.entrees:hover_.btn.menus-choix {
-  transform: scale(1);
-}
-.entrees:hover_.btn.menus-choix span {
-  transform: translateY(0);
-}
-
-.menus-choix {
-  background-color: #99e2d0;
-  width: 4rem;
-  height: 5rem;
-  margin: -1rem -5rem -1rem 1rem;
-  border-bottom-right-radius: 0.9rem;
-  border-top-right-radius: 0.9rem;
-  transition-duration: 0.5s;
-  background-color: #99e2d0;
-}
-
-.menus-icon {
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: #fff;
-  border-radius: 100px;
-  transform: rotate(180deg);
-  transition-duration: 0.5s;
-  color: #99e2d0;
-  transform: rotate(360deg);
+/*************************************************
+Loader page d'accueil
+*************************************************/
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  animation: loader 0.06s;
+  animation-delay: 3.75s;
   animation-fill-mode: both;
-  cursor: pointer;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.menus-icon_.ico-menus {
-  transform: rotate(0);
+.loader__pins {
+  height: 1rem;
+  width: 1rem;
+  font-size: 2rem;
+  border-radius: 1rem;
+  animation: popcorn 1s;
+  animation-iteration-count: 4;
+}
+.loader__pinsContainer {
+  display: flex;
+  width: 20rem;
+  height: 5rem;
+  justify-content: space-around;
+}
+.loader__pins--2 {
+  animation-delay: 0.55s;
+}
+.loader__pins--3 {
+  animation-delay: 0.25s;
 }
 
+/****************************************************/
 /***********************************************
 Spinner loader
 ***********************************************/
@@ -1379,63 +1583,74 @@ Spinner loader
     justify-content: center;
     align-items: center;
 }*/
-.loader-cerclecontainer {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  z-index: 1000;
-  top: 0;
-  background-color: rgba(255, 255, 255, 0.9);
-}
+/*.loader-cerclecontainer
+/*{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    top: 0;
+    background-color: hsla(0,0%,100%,.9);
+    animation: loader .01s;
+    animation-delay: 1.75s;
+    animation-fill-mode: both;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-.loader {
-  animation: spin 1s infinite linear;
-  animation-iteration-count: 2;
-  animation-delay: 1.75s;
-  animation-fill-mode: both;
-  border: solid 2vmin transparent;
-  border-radius: 50%;
-  border-right-color: #09f;
-  border-top-color: #09f;
-  box-sizing: border-box;
-  height: 20vmin;
-  left: calc(50% - 10vmin);
-  position: fixed;
-  top: calc(50% - 10vmin);
-  width: 20vmin;
-  z-index: 10000;
-}
-.loader:before {
-  animation: spin 2s infinite linear;
-  animation-iteration-count: 2;
-  animation-delay: 1.75s;
-  border: solid 2vmin transparent;
-  border-radius: 50%;
-  border-right-color: #3cf;
-  border-top-color: #3cf;
-  box-sizing: border-box;
-  content: "";
-  height: 16vmin;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 16vmin;
-}
-.loader:after {
-  animation: spin 3s infinite linear;
-  animation-iteration-count: 2;
-  animation-delay: 1.75s;
-  border: solid 2vmin transparent;
-  border-radius: 50%;
-  border-right-color: #6ff;
-  border-top-color: #6ff;
-  box-sizing: border-box;
-  content: "";
-  height: 12vmin;
-  left: 2vmin;
-  position: absolute;
-  top: 2vmin;
-  width: 12vmin;
-}
+    .loader {
+
+    animation:spin 1s infinite linear;
+    animation-iteration-count: 2;
+    animation-delay: 1.75s;
+    animation-fill-mode: both;
+    border:solid 2vmin transparent;
+    border-radius:50%;
+    border-right-color:#09f;
+    border-top-color:#09f;
+    box-sizing:border-box;
+    height:20vmin;
+    left:calc(50% - 10vmin);
+    position:fixed;
+    top:calc(50% - 10vmin);
+    width:20vmin;   
+    z-index:10000;
+    &:before {
+      animation:spin 2s infinite linear;
+      animation-iteration-count: 2;
+      animation-delay: 1.75s;
+      border:solid 2vmin transparent;
+      border-radius:50%;
+      border-right-color:#3cf;
+      border-top-color:#3cf;
+      box-sizing:border-box;
+      content:"";
+      height:16vmin;
+      left:0;
+      position:absolute;
+      top:0;
+      width:16vmin;
+    }
+    &:after {
+      animation:spin 3s infinite linear;
+      animation-iteration-count: 2;
+      animation-delay: 1.75s;
+      border:solid 2vmin transparent;
+      border-radius:50%;
+      border-right-color:#6ff;
+      border-top-color:#6ff;
+      box-sizing:border-box;
+      content:"";
+      height:12vmin;
+      left:2vmin;
+      position:absolute;
+      top:2vmin;
+      width:12vmin;
+    }
+  }
+}*/
 
 /*# sourceMappingURL=style.css.map */

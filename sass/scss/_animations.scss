@@ -1,18 +1,33 @@
-@keyframes spin
-{
-    100% {
-      opacity: 0;
-      z-index: -10;
-      transform:rotate(360deg);        
-    }
-}
 
-@keyframes loader-cerclecontainer {
+/*************************************
+Lodear spinner page d'accueil
+*************************************/
+
+@keyframes loader {
   100% {
     opacity: 0;
-    z-index: -1000;
+    z-index: -10;
   }
 } 
+
+@keyframes popcorn {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(0.7rem);
+  }
+  75% {
+    transform: translateY(-0.7rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/**************************************
+Apparition des menus en décalés
+**************************************/
 
 @keyframes ico-menus {
   0% {
@@ -23,5 +38,3 @@
   }
 }
 
-
-  
