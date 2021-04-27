@@ -7,7 +7,7 @@ Page d'accueil des restaurants
 @media screen and (min-width: 280px) and (max-width: 767.98px) 
 {
     .explore-section {
-        height: 70vh;
+        height: 20rem;
 
         .explore-texte {
             margin: 0 0 3rem 0;
@@ -19,7 +19,7 @@ Page d'accueil des restaurants
 @media screen and (min-width: 767.98px) and (max-width: 1024px)
 {
     .explore-section {
-        height: 60vh;
+        height: 20rem;
 
         .explore-texte {
             margin: 0 0 3rem 0;
@@ -29,32 +29,68 @@ Page d'accueil des restaurants
     .fct-section {
 
         .fct-titre {
-        padding: 3rem 7rem 1rem 1rem;
+        padding: 3rem 7rem 1rem 1.5rem;
         text-align: left;
-        font-size: 2rem;
+        font-size: 1.5rem;
         }
     }
 
-    .section-titre {
-        text-align: left;
-        padding: 0 0 0 1rem;
-    }
-    
-    .contenu-restaurants .rest-img {
-        width: 45vw;
-        height: 20vw;
-    }
-    
-}
+    .section-restaurants {
+        width: 75%;
+        background-color: #f2f2f2f2;
 
-// Medium devices (tablets, less than 992px)
-/*@media (max-width: 991.98px)*/
+        .section-titre {
+            padding: 3rem 0 0 2rem;
+        }
+
+        .container-restaurants {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 50px 1fr 1fr;
+            margin: 0rem 0 0 0;
+        }
+
+        .contenu-restaurants {
+            grid-row-start: 2 span;
+            }
+
+            .diapos1 {
+                grid-row-start: 2;
+            }
+
+            .diapos2 {
+                grid-row-start: 2;
+            }
+
+            .diapos3 {
+                grid-row-start: 3;
+            }
+
+            .diapos4 {
+                grid-row-start: 5;
+            }
+
+        .diapos-restaurants {
+            margin: 0.5rem 1rem 3rem 1rem;
+        }
+
+        .contenu-restaurants .rest-img {
+            width: 45vw;
+            height: 20vw;
+        }
+
+        .section-titre {
+            text-align: left;
+            padding: 0 0 0 1rem;
+        }
+    }
+}
 
 // Large devices (desktops, less than 1200px)
 @media screen and (min-width: 1024px) and (max-width: 1600px)
 {    
     .explore-section {
-        height: 20vh;
+        height: 20rem;
 
         .explore-texte {
             margin: 0 0 3rem 0;
@@ -151,7 +187,7 @@ Page d'accueil des restaurants
 @media screen and (min-width: 1600px) and (max-width: 2000px)
 {
     .explore-section {
-        height: 20vh;
+        height: 20rem;
 
         .explore-texte {
             margin: 0 0 3rem 0;
@@ -337,33 +373,19 @@ Page d'accueil des restaurants
             .rest-img {
             width: 35vw;
             height: 15vw;
+            }
         }
         
-        /*display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        position: relative;*/
-        }
-
-       
-
         .diapos-restaurants {
 
             margin: 0.5rem 1rem 3rem 1rem;
-        }
-
-        
+        }        
     }
 }
 
 /***********************************************************************
 Pages des cartes des restaurants
 ***********************************************************************/
-
-// Small devices (landscape phones, 576px and up)
-@media screen and (min-width: 576px) { 
-
-}
 
 // Medium devices (tablets, 768px and up)
 @media screen and (min-width: 768px) and (max-width: 1024px) {

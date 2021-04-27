@@ -1,45 +1,40 @@
 <!DOCTYPE html>
 <html lang="fr-FR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./sass/css/style.css" media="screen"/>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"rel="stylesheet"/>
-    <script src="https://kit.fontawesome.com/62fdb3f298.js" crossorigin="anonymous"></script>
-    <title>Restaurant la palette du goût</title>
-</head>
-<body>
-
-    <header class="page">
-        <div class="logo-menus">
-            <div class="fleche">
-                <a href="./index.html">
-                   <i class="fa-arrow-left fas"></i>
-                </a>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./sass/css/style.css" media="screen"/>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"rel="stylesheet"/>
+        <script src="https://kit.fontawesome.com/62fdb3f298.js" crossorigin="anonymous"></script>
+        <title>Restaurant la palette du goût</title>
+    </head>
+    <body>
+        <header class="page">
+            <div class="logo-menus">
+                <div class="fleche">
+                    <a href="./index.html"><i class="fa-arrow-left fas"></i></a>
+                </div>
+                <div>
+                    <a href="./index.html"><img id="logo" src="./logo/ohmyfood.png" alt="logo_ohmyfood"></a>
+                </div>
             </div>
-            <div>
-                <a href="./index.html">
-                   <img id="logo" src="./logo/ohmyfood.png" alt="logo_ohmyfood">
-                </a>
-            </div>
-        </div>
-    </header>
+        </header>
 
         <img class="img-menus" src="./images/la_palette_du_gout.jpg" alt="Menu la palette du goût">
 
     <main class="carte-restaurant carte">
         <section class="entete">
-          <div>
-             <h2 class="cartes-titre">La palette du goût</h2>
-          </div>
-          <div class="btn-coeur btn-menu">
-            <i class="fas fa-heart icon"></i>
-            <i class="far fa-heart icon-j-aime"></i>
-          </div>
+          <div><h2 class="cartes-titre">La palette du goût</h2></div>
+          <!--Animation coeur-->
+            <div class="btn-coeur btn-menu">
+                <i class="fas fa-heart icon"></i>
+                <i class="far fa-heart icon-j-aime"></i>
+            </div>
         </section>
         <div  class="menus">
+            <!--Section menus entrees-->
             <section class="section-menus">
                 <h3 class="carte-titre">ENTREES</h3>
                 <div class="separateur"></div>
@@ -51,7 +46,7 @@
                     <div class="menus-prix">25€<div>                    
                     <div class="menus-choix">
                         <div class="menus-icon">
-                            <span><i class="fa-check fas ico-menus"></i></span>
+                            <span><i class="fa-check fas"></i></span>
                         </div>                                             
                     </div>
                 </article>
@@ -75,11 +70,12 @@
                     <div class="menus-prix">20€</div>
                     <div class="menus-choix">
                         <div class="menus-icon">
-                            <span><i class="fa-check fas ico-menus"></i></span>
+                            <span><i class="fa-check fas"></i></span>
                         </div>
                     </div>
                 </article>
             </section>
+             <!--Section menus plats-->
             <section class="section-menus">
                 <h3 class="carte-titre">PLATS</h3>
                 <div class="separateur"></div>          
@@ -91,7 +87,7 @@
                         <div class="menus-prix">40€</div>
                         <div class="menus-choix">
                             <div class="menus-icon">
-                                <span><i class="fa-check fas" aria-hidden="true"></i></span>
+                                <span><i class="fa-check fas"></i></span>
                             </div>
                         </div>
                 </article>
@@ -119,7 +115,8 @@
                             </div>
                         </div>
                 </article>            
-            </section>        
+            </section>
+            <!--Section menus desserts-->       
             <section class="section-menus">
                 <h3 class="carte-titre">DESSERTS</h3>
                 <div class="separateur"></div>
@@ -161,42 +158,41 @@
                 </article>
             </section>           
         </div>
-        <button class="cmd" type="button">Commander</button>
+            <button class="cmd" type="button">Commander</button>
     </main>
 
-    <footer class="footer">
-        <div class="footer-container">
-          <ul class="footer-menus">
-            <li class="footer-liens">
-              <ul>
-                <a class="footer-logo" href="./index.html"><h2>ohmyfood</h2></a>
-              </ul>
-            </li>
-            <li class="footer-liens">
-              <ul>
-                <i class="fas fa-utensils footer-icon1"></i>
-                <a class="footer-rest" href="#">Proposer un restaurant</a>
-              </ul>
-            </li>
-            <li class="footer-liens">
-              <ul>
-                <i class="fas fa-hands-helping footer-icon2"></i>
-                <a class="footer-part" href="#">Devenir partenaire</a>
-              </ul>
-            </li>
-            <li class="footer-liens">
-              <ul>
-                <a class="footer-legal" href="#">Mentions légales</a>
-              </ul>
-            </li>
-            <li class="footer-liens">
-              <ul>
-                <a class="footer-contact" href="#">Contact</a>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </footer>
-    
-</body>
+        <footer class="footer">
+            <div class="footer-container">
+                <ul class="footer-menus">
+                    <li class="footer-liens">
+                    <ul>
+                        <a class="footer-logo" href="./index.html"><h2>ohmyfood</h2></a>
+                    </ul>
+                    </li>
+                    <li class="footer-liens">
+                    <ul>
+                        <i class="fas fa-utensils footer-icon1"></i>
+                        <a class="footer-rest" href="#">Proposer un restaurant</a>
+                    </ul>
+                    </li>
+                    <li class="footer-liens">
+                    <ul>
+                        <i class="fas fa-hands-helping footer-icon2"></i>
+                        <a class="footer-part" href="#">Devenir partenaire</a>
+                    </ul>
+                    </li>
+                    <li class="footer-liens">
+                    <ul>
+                        <a class="footer-legal" href="#">Mentions légales</a>
+                    </ul>
+                    </li>
+                    <li class="footer-liens">
+                    <ul>
+                        <a class="footer-contact" href="mailto:ohmyfood@gmail.com">Contact</a>
+                    </ul>
+                    </li>
+                </ul>
+            </div>
+        </footer>    
+    </body>
 </html>

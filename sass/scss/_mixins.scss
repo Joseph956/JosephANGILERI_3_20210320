@@ -99,6 +99,7 @@ Pages des menus restaurants
     border-top-right-radius: 0.9rem;
     transition-duration: .5s;
     background-color: $fond-menus;
+    position: relative;
 }
 
 @mixin menus-icon {
@@ -106,8 +107,8 @@ Pages des menus restaurants
     height: 1.5rem;
     background-color: #fff;
     border-radius: 100px;
-    transform: rotate(180deg);
     transition-duration: .5s;
+    transition-property: transform;
 }
 
 @mixin anim-menus {
