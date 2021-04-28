@@ -18,12 +18,12 @@ Section ville
     justify-content: center;
 
     .mappy {
-        padding: 1rem;
+        padding: 1rem 0;
     }
 
     .mappy-description {
         font-size: 1.2rem;
-        padding: 1rem 0;
+        padding: 1rem;
     }
 }
 
@@ -100,11 +100,14 @@ Exploration des restaurants
         font-size: 1.3rem;
         background-color: white;
         margin: 1rem 0 1rem 0;
+        transition: opacity 0.4s;
     }
 
     .btn {
         &:hover {
             color: $color-primary;
+            background: rgba($color: #cbc1d8, $alpha: 1.0);
+            opacity: 0.9;
         }
     }
     
@@ -150,6 +153,7 @@ Exploration des restaurants
         padding: 1.5rem 1rem 1.5rem 2.5rem;
         &:hover {
             color: $color-primary;
+            opacity: 0.9;
         }
     }
 
@@ -229,10 +233,11 @@ Section restaurants
 
         .btn-coeur {
             width: 15%;
-            margin-top: 15px;
+            margin: 0.5rem;
             background-color: transparent;
             border: 0 solid transparent;
             padding: 0;
+            color: #000;
             display: flex;
             align-items: center;
             justify-content: center;

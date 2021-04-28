@@ -12,6 +12,9 @@ Page d'accueil section restaurants
 Pages des menus restaurants
 *****************************************/
 /*************************************
+icons
+*************************************/
+/*************************************
 Lodear spinner page d'accueil
 *************************************/
 @keyframes loader {
@@ -103,7 +106,7 @@ header, .carte-restaurant {
 }
 
 #logo {
-  margin: 1rem 0 1rem 2rem;
+  margin: 1rem 0 1rem 0rem;
   border-radius: 0;
   width: 12rem;
   position: relative;
@@ -150,11 +153,11 @@ Section ville
   justify-content: center;
 }
 .ville-section .mappy {
-  padding: 1rem;
+  padding: 1rem 0;
 }
 .ville-section .mappy-description {
   font-size: 1.2rem;
-  padding: 1rem 0;
+  padding: 1rem;
 }
 
 /************************************
@@ -216,9 +219,12 @@ Exploration des restaurants
   font-size: 1.3rem;
   background-color: white;
   margin: 1rem 0 1rem 0;
+  transition: opacity 0.4s;
 }
 .fct-container .btn:hover {
   color: #9356DC;
+  background: #cbc1d8;
+  opacity: 0.9;
 }
 .fct-container .btn1 {
   position: relative;
@@ -312,6 +318,7 @@ Exploration des restaurants
 }
 .icon-fct:hover {
   color: #9356DC;
+  opacity: 0.9;
 }
 
 /***********************************
@@ -367,7 +374,7 @@ Section restaurants
 .icon-coeur .description .rest-titre {
   font-size: 1.2rem;
   color: black;
-  padding: 0.3rem 1rem;
+  padding: 0.3rem 0.5rem;
   font-style: normal;
   font-weight: normal;
 }
@@ -378,10 +385,11 @@ Section restaurants
 }
 .icon-coeur .btn-coeur {
   width: 15%;
-  margin-top: 15px;
+  margin: 0.5rem;
   background-color: transparent;
   border: 0 solid transparent;
   padding: 0;
+  color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -882,14 +890,18 @@ header .page {
   max-width: 2000px;
 }
 
-.logo-menus {
-  width: 100%;
-}
 .logo-menus .fleche {
-  width: 12%;
+  width: 100%;
+  position: absolute;
+  font-size: 1.2rem;
+  left: 3rem;
 }
 .logo-menus .fa-arrow-left {
   align-self: start;
+  color: black;
+}
+.logo-menus .ohmy {
+  width: 70%;
 }
 
 /***********************************
@@ -907,14 +919,14 @@ Titre du menus et bouton "j'aime"
 .entete .cartes-titre {
   width: 100%;
   font-size: 1.4rem;
-  padding: 1.5rem 0 0 1.5rem;
+  padding: 1.5rem 0 0 1rem;
 }
 .entete .btn-coeur {
   width: 20%;
   display: flex;
   justify-content: flex-end;
   font-size: 1.3rem;
-  margin-top: 30px;
+  margin: 1.5rem 0.5rem;
 }
 .entete .btn-menu {
   width: 2rem;
@@ -1104,7 +1116,7 @@ Bouton commander
 .cmd {
   font-size: 1rem;
   padding: 1rem 5rem;
-  margin: 3rem 3rem 5rem 3rem;
+  margin: 3rem 3rem 5rem 4.5rem;
   border-radius: 100px;
   color: white;
   border: #9356DC;
@@ -1599,9 +1611,11 @@ Loader page d'accueil
 }
 .loader__pinsContainer {
   display: flex;
-  width: 20rem;
+  width: 50%;
   height: 5rem;
   justify-content: space-around;
+  justify-items: center;
+  margin: 0 2rem 0 0;
 }
 .loader__pins--2 {
   animation-delay: 0.55s;

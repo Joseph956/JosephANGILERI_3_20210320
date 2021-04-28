@@ -111,9 +111,11 @@ Loader page d'accueil
   
       &Container {
         display: flex;
-        width: 20rem;
+        width: 50%;
         height: 5rem;
         justify-content: space-around;
+        justify-items: center;
+        margin: 0 2rem 0 0;
       }
     
       &--2 {
