@@ -12,13 +12,11 @@
     padding: 0;
 }
 
-body
-{
+body {
     @extend %flex-center-menus;
 }
 
-header
-{
+header {
     @extend %header-menus;
     @include header-accueil;
     font-family: $fonts;
@@ -26,37 +24,31 @@ header
 }
 
 
-main
-{
+main {
    height: auto;
 }
 
 
-section
-{
+section {
     display: block;
 }
 
-#logo
-{
+#logo {
     @extend %header-logo;
 }
 
-.logo-accueil
-{
+.logo-accueil {
     font-size: 1rem;
 }
 
-h1, h2, h3, h4
-{
+h1, h2, h3, h4 {
     font-family: 'Shrikhand', cursive;
     font-style: normal;
     font-weight: normal;
     font-size: 1.5rem;
 }
 
-p
-{
+p {
     font-family: 'Roboto', sans-serif;
 }
 
@@ -64,8 +56,7 @@ p
 Positionnement du site en milieu de page
 *******************************************/
 
-html, header, main, body
-{
+html, header, main, body {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -74,11 +65,9 @@ html, header, main, body
     width: 100%;
     height: auto;
     margin: 0;
-
 }
 
-.footer
-{
+.footer {
     max-width: 1715px;
 }
 

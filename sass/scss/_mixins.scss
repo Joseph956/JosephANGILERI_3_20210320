@@ -12,8 +12,7 @@ Page d'accueil Header
 /**********************************************************
 Page d'accueil section fonctionnement
 **********************************************************/
-@mixin btn-menus 
-{
+@mixin btn-menus {
     position: relative;
     background-color: white;
     border: 2px solid transparent;
@@ -23,8 +22,7 @@ Page d'accueil section fonctionnement
     box-shadow: 5px 5px 10px #cecdcd, -5px -5px 10px #cfcece; 
 }
 
-@mixin btn-before
-{
+@mixin btn-before {
     position: absolute;
     content: "";
     width: 30px;
@@ -117,8 +115,7 @@ Pages des menus restaurants
     max-width: 100%;
 }
 
-@mixin menus-prix
-{
+@mixin menus-prix {
     font-family: 'roboto';
     padding-bottom: 6px;
     padding-left: .5rem;   

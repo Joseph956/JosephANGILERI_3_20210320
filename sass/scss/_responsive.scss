@@ -3,7 +3,7 @@
 Page d'accueil des restaurants
 ***********************************************************************/
 
-// X-Small devices (portrait phones, less than 576px)
+// X-Small devices (portrait phones)
 @media screen and (min-width: 280px) and (max-width: 767.98px) 
 {
     .explore-section {
@@ -15,7 +15,7 @@ Page d'accueil des restaurants
     }    
 }
 
-// Small devices (landscape phones, less than 768px)
+// Small devices (landscape phones)
 @media screen and (min-width: 767.98px) and (max-width: 1024px)
 {
     .explore-section {
@@ -40,7 +40,8 @@ Page d'accueil des restaurants
         background-color: #f2f2f2f2;
 
         .section-titre {
-            padding: 3rem 0 0 2rem;
+            text-align: left;
+            padding: 0 0 0 1rem;
         }
 
         .container-restaurants {
@@ -78,15 +79,10 @@ Page d'accueil des restaurants
             width: 45vw;
             height: 20vw;
         }
-
-        .section-titre {
-            text-align: left;
-            padding: 0 0 0 1rem;
-        }
     }
 }
 
-// Large devices (desktops, less than 1200px)
+// Large devices (desktops, less than 1600px)
 @media screen and (min-width: 1024px) and (max-width: 1600px)
 {    
     .explore-section {
@@ -141,7 +137,8 @@ Page d'accueil des restaurants
         background-color: #f2f2f2f2;
 
         .section-titre {
-            padding: 3rem 0 0 2rem;
+            text-align: left;
+            padding: 0 0 0 1rem;
         }
 
         .container-restaurants {
@@ -183,7 +180,7 @@ Page d'accueil des restaurants
 }
 
 
-/*/ X-Large devices (large desktops, less than 1400px)*/
+/*/ X-Large devices (large desktops)*/
 @media screen and (min-width: 1600px) and (max-width: 2000px)
 {
     .explore-section {
@@ -240,7 +237,8 @@ Page d'accueil des restaurants
         border-radius: 0px;
 
         .section-titre {
-            padding: 3rem 0 0 2rem;
+            text-align: left;
+            padding: 0 0 0 1rem;
         }
 
         .container-restaurants {
@@ -282,7 +280,7 @@ Page d'accueil des restaurants
     }
 }
 
-/*/ X-Large devices (large desktops, less than 1400px)*/
+/*/ X-Large devices (large desktops)*/
 @media screen and (min-width: 2000px)
 {
     .explore-section {
@@ -339,7 +337,8 @@ Page d'accueil des restaurants
         border-radius: 0px;
 
         .section-titre {
-            padding: 3rem 0 0 2rem;
+            text-align: left;
+            padding: 0 0 0 1rem;
         }
 
         .contenu-restaurants {
@@ -383,6 +382,42 @@ Page d'accueil des restaurants
     }
 }
 
+.footer-accueil
+{
+    background-color: black;
+    width: 100%;
+    
+    .footer-container {
+    @extend %flex-col;
+    padding: 1rem;
+
+        .footer-menus {
+        display: flex;
+        justify-content: space-around;
+        height: 2rem;
+        padding: 5rem;
+        font-size: 1.5rem            
+        }
+
+        .footer-liens {
+        padding: 0;
+        }
+
+        .footer-logo {
+        font-size: 2rem;
+        text-decoration: none;
+        }
+        
+        .footer-icon1 {
+        font-size: 2rem;
+        }
+
+        .footer-icon2 {
+        font-size: 2rem;
+        }
+    }    
+}
+
 /***********************************************************************
 Pages des cartes des restaurants
 ***********************************************************************/
@@ -396,15 +431,15 @@ Pages des cartes des restaurants
     }
 
     .carte-restaurant {
-        width: 100%;
+        width: 80%;
         background-color: white;
         margin-top: -6.8rem;
         border-radius: 2rem 2rem 0 0;
     }
-}
+}    
 
-// Large devices (desktops, 992px and up)
-@media screen and (min-width: 1024px) and (max-width: 1715px) { 
+// Large devices (desktops, 1000px and up)
+@media screen and (min-width: 1024px) and (max-width: 1315px) { 
 
     .img-menus {
         height: 40vw;
@@ -433,10 +468,83 @@ Pages des cartes des restaurants
 
     .menus {
         flex-direction: row;
-    }
+        max-width: 95%;
+        min-width: 95%;
+
+        .section-menus {
+        max-width: 30%;
+        min-width: 30%;
+        padding: 0 0 0 0;     
+        }
+
+        .entrees {
+            max-width: 90%;
+        }
+
+        .plats {
+            max-width: 90%;
+        }
+
+        .desserts {
+            max-width: 90%;
+        }
+    }    
 }
 
-// X-Large devices (large desktops, 1200px and up)
+// Large devices (desktops, 1300px and up)
+@media screen and (min-width: 1315px) and (max-width: 1715px) { 
+
+    .img-menus {
+        height: 40vw;
+        object-position: center;
+    }
+
+    .carte-restaurant {
+        width: 100%;
+        background-color: white;
+        margin-top: -6.8rem;
+        border-radius: 2rem 2rem 0 0;
+
+        .entete {
+
+            .cartes-titre {
+            padding: 2rem 0 0 0.5rem;
+            text-align: center;
+            }
+        
+            .coeur {
+                justify-content: flex-end;
+                margin: 2.5rem 0;
+            }
+        }
+    }
+
+    .menus {
+        flex-direction: row;
+        max-width: 90%;
+        min-width: 90%;
+
+        .section-menus {
+        max-width: 30%;
+        min-width: 30%;      
+        }
+
+        .entrees {
+            max-width: 90%;
+
+        }
+
+        .plats {
+            max-width: 90%;
+        }
+
+        .desserts {
+            max-width: 90%;
+        }
+    }    
+}
+
+// X-Large devices (large desktops, 1700px and up)
 @media screen and (min-width: 1715px) and (max-width: 3500px) {
 
     .img-menus {
@@ -456,7 +564,7 @@ Pages des cartes des restaurants
 
         .entete {
             flex-direction: column;
-            width: auto;
+            width: 10%;
 
             .cartes-titre {
             padding: 3.5rem 0 0 0.5rem;
@@ -476,14 +584,50 @@ Pages des cartes des restaurants
     }
 
     .menus {
-        max-width: 100%;
+        max-width: 65%;
+        min-width: 65%;
         display: flex;
         flex-direction: row;
         padding-bottom: 15px;
+
+        .section-menus {
+            max-width: 30%;
+            min-width: 30%;       
+        }
+
+        .entrees {
+            max-width: 90%;
+        }
+
+        .plats {
+            max-width: 90%;
+        }
+
+        .desserts {
+            max-width: 90%;
+        }
     }
 
     .cmd {
-        margin: 7rem 1.5rem 5rem 1.5rem;
+    margin: 7rem 1.5rem 5rem 1.5rem;
     }
 
+    .footer-restaurants {
+        max-width: 1715px;
+    }
+
+    /********************************************
+    Taille maximale du site sur ecran large
+    ********************************************/
+    .header {
+        max-width: 2500px;
+    }
+
+    main {
+        max-width: 2500px;
+    }
+
+    .footer-accueil {
+        max-width: 2500px;
+    }
 }
