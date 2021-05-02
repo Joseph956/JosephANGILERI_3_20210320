@@ -20,7 +20,6 @@ header {
     @extend %header-menus;
     @include header-accueil;
     font-family: $fonts;
-    width: 100%;
 }
 
 
@@ -65,10 +64,6 @@ html, header, main, body {
     width: 100%;
     height: auto;
     margin: 0;
-}
-
-.footer {
-    max-width: 1715px;
 }
 
 /*************************************************

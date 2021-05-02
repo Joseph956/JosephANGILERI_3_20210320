@@ -285,7 +285,7 @@ Footer
     
     .footer-container {
         @extend %flex-col;
-        padding: 1rem;
+        padding: 1.5rem 2rem;
     }
 }
     
@@ -293,6 +293,7 @@ Footer
     color: white;
     list-style: none;
     text-decoration: none;
+}
 
     .footer-logo {
         color: white;
@@ -331,6 +332,6 @@ Footer
     .footer-contact {
         @extend %footer-liens;
     }
-}
+
 
     

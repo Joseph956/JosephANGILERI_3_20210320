@@ -129,7 +129,7 @@ header, .carte-restaurant {
   align-items: flex-end;
 }
 
-.footer-menus .footer-contact, .footer-menus .footer-legal, .footer-menus .footer-part, .footer-menus .footer-rest {
+.footer-menus .footer-contact, .footer-menus .footer-legal, .footer-menus .footer-part, .footer-menus .footer-rest, .footer-contact, .footer-legal, .footer-part, .footer-rest {
   color: white;
   padding: 0.3rem;
   text-decoration: none;
@@ -461,7 +461,7 @@ Footer
   width: 100%;
 }
 .footer-accueil .footer-container {
-  padding: 1rem;
+  padding: 1.5rem 2rem;
 }
 
 .footer-menus {
@@ -469,23 +469,28 @@ Footer
   list-style: none;
   text-decoration: none;
 }
-.footer-menus .footer-logo {
+
+.footer-logo {
   color: white;
   text-decoration: none;
   font-family: "Shrikhand", Roboto;
   font-size: inherit;
 }
-.footer-menus .footer-liens {
+
+.footer-liens {
   padding: 0.2rem;
 }
-.footer-menus .footer-icon1 {
+
+.footer-icon1 {
   padding: 0.3rem;
   font-size: 1rem;
 }
-.footer-menus .footer-icon2 {
+
+.footer-icon2 {
   padding: 0.3rem;
   font-size: 0.7rem;
 }
+
 /***********************************************************************
 Page d'accueil des restaurants
 ***********************************************************************/
@@ -512,7 +517,7 @@ Page d'accueil des restaurants
   }
 
   .section-restaurants {
-    width: 75%;
+    width: auto;
     background-color: #f2f2f2f2;
   }
   .section-restaurants .section-titre {
@@ -544,7 +549,7 @@ Page d'accueil des restaurants
     margin: 0.5rem 1rem 3rem 1rem;
   }
   .section-restaurants .contenu-restaurants .rest-img {
-    width: 45vw;
+    width: 46vw;
     height: 20vw;
   }
 }
@@ -591,7 +596,7 @@ Page d'accueil des restaurants
   }
 
   .section-restaurants {
-    width: 75%;
+    width: auto;
     background-color: #f2f2f2f2;
   }
   .section-restaurants .section-titre {
@@ -623,7 +628,7 @@ Page d'accueil des restaurants
     margin: 0.5rem 1rem 3rem 1rem;
   }
   .section-restaurants .contenu-restaurants .rest-img {
-    width: 45vw;
+    width: 47vw;
     height: 20vw;
   }
 }
@@ -671,7 +676,7 @@ Page d'accueil des restaurants
   }
 
   .section-restaurants {
-    width: 75%;
+    width: auto;
     margin: 0rem;
     border-radius: 0px;
   }
@@ -683,7 +688,6 @@ Page d'accueil des restaurants
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 50px 1fr 1fr;
-    grid-column-gap: 2rem;
     margin: 5rem 0 0 0;
   }
   .section-restaurants .contenu-restaurants {
@@ -705,8 +709,8 @@ Page d'accueil des restaurants
     margin: 0.5rem 1rem 3rem 1rem;
   }
   .section-restaurants .contenu-restaurants .rest-img {
-    width: 35vw;
-    height: 15vw;
+    width: 48vw;
+    height: 20vw;
   }
 }
 /*/ X-Large devices (large desktops)*/
@@ -753,7 +757,7 @@ Page d'accueil des restaurants
   }
 
   .section-restaurants {
-    width: 70%;
+    width: auto;
     margin: 0rem;
     border-radius: 0px;
   }
@@ -780,45 +784,16 @@ Page d'accueil des restaurants
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 50px 1fr 1fr;
-    grid-column-gap: 2rem;
     margin: 5rem 0 0 0;
   }
   .section-restaurants .container-restaurants .rest-img {
-    width: 35vw;
-    height: 15vw;
+    width: 48vw;
+    height: 20vw;
   }
   .section-restaurants .diapos-restaurants {
     margin: 0.5rem 1rem 3rem 1rem;
   }
 }
-.footer-accueil {
-  background-color: black;
-  width: 100%;
-}
-.footer-accueil .footer-container {
-  padding: 1rem;
-}
-.footer-accueil .footer-container .footer-menus {
-  display: flex;
-  justify-content: space-around;
-  height: 2rem;
-  padding: 5rem;
-  font-size: 1.5rem;
-}
-.footer-accueil .footer-container .footer-liens {
-  padding: 0;
-}
-.footer-accueil .footer-container .footer-logo {
-  font-size: 2rem;
-  text-decoration: none;
-}
-.footer-accueil .footer-container .footer-icon1 {
-  font-size: 2rem;
-}
-.footer-accueil .footer-container .footer-icon2 {
-  font-size: 2rem;
-}
-
 /***********************************************************************
 Pages des cartes des restaurants
 ***********************************************************************/
@@ -833,6 +808,10 @@ Pages des cartes des restaurants
     background-color: white;
     margin-top: -6.8rem;
     border-radius: 2rem 2rem 0 0;
+  }
+
+  .footer-restaurants {
+    width: 80%;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1315px) {
@@ -977,21 +956,6 @@ Pages des cartes des restaurants
 
   .footer-restaurants {
     max-width: 1715px;
-  }
-
-  /********************************************
-  Taille maximale du site sur ecran large
-  ********************************************/
-  .header {
-    max-width: 2500px;
-  }
-
-  main {
-    max-width: 2500px;
-  }
-
-  .footer-accueil {
-    max-width: 2500px;
   }
 }
 /*************************************
@@ -1300,7 +1264,7 @@ Page d'accueil des restaurants
   }
 
   .section-restaurants {
-    width: 75%;
+    width: auto;
     background-color: #f2f2f2f2;
   }
   .section-restaurants .section-titre {
@@ -1332,7 +1296,7 @@ Page d'accueil des restaurants
     margin: 0.5rem 1rem 3rem 1rem;
   }
   .section-restaurants .contenu-restaurants .rest-img {
-    width: 45vw;
+    width: 46vw;
     height: 20vw;
   }
 }
@@ -1379,7 +1343,7 @@ Page d'accueil des restaurants
   }
 
   .section-restaurants {
-    width: 75%;
+    width: auto;
     background-color: #f2f2f2f2;
   }
   .section-restaurants .section-titre {
@@ -1411,7 +1375,7 @@ Page d'accueil des restaurants
     margin: 0.5rem 1rem 3rem 1rem;
   }
   .section-restaurants .contenu-restaurants .rest-img {
-    width: 45vw;
+    width: 47vw;
     height: 20vw;
   }
 }
@@ -1459,7 +1423,7 @@ Page d'accueil des restaurants
   }
 
   .section-restaurants {
-    width: 75%;
+    width: auto;
     margin: 0rem;
     border-radius: 0px;
   }
@@ -1471,7 +1435,6 @@ Page d'accueil des restaurants
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 50px 1fr 1fr;
-    grid-column-gap: 2rem;
     margin: 5rem 0 0 0;
   }
   .section-restaurants .contenu-restaurants {
@@ -1493,8 +1456,8 @@ Page d'accueil des restaurants
     margin: 0.5rem 1rem 3rem 1rem;
   }
   .section-restaurants .contenu-restaurants .rest-img {
-    width: 35vw;
-    height: 15vw;
+    width: 48vw;
+    height: 20vw;
   }
 }
 /*/ X-Large devices (large desktops)*/
@@ -1541,7 +1504,7 @@ Page d'accueil des restaurants
   }
 
   .section-restaurants {
-    width: 70%;
+    width: auto;
     margin: 0rem;
     border-radius: 0px;
   }
@@ -1568,45 +1531,16 @@ Page d'accueil des restaurants
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 50px 1fr 1fr;
-    grid-column-gap: 2rem;
     margin: 5rem 0 0 0;
   }
   .section-restaurants .container-restaurants .rest-img {
-    width: 35vw;
-    height: 15vw;
+    width: 48vw;
+    height: 20vw;
   }
   .section-restaurants .diapos-restaurants {
     margin: 0.5rem 1rem 3rem 1rem;
   }
 }
-.footer-accueil {
-  background-color: black;
-  width: 100%;
-}
-.footer-accueil .footer-container {
-  padding: 1rem;
-}
-.footer-accueil .footer-container .footer-menus {
-  display: flex;
-  justify-content: space-around;
-  height: 2rem;
-  padding: 5rem;
-  font-size: 1.5rem;
-}
-.footer-accueil .footer-container .footer-liens {
-  padding: 0;
-}
-.footer-accueil .footer-container .footer-logo {
-  font-size: 2rem;
-  text-decoration: none;
-}
-.footer-accueil .footer-container .footer-icon1 {
-  font-size: 2rem;
-}
-.footer-accueil .footer-container .footer-icon2 {
-  font-size: 2rem;
-}
-
 /***********************************************************************
 Pages des cartes des restaurants
 ***********************************************************************/
@@ -1621,6 +1555,10 @@ Pages des cartes des restaurants
     background-color: white;
     margin-top: -6.8rem;
     border-radius: 2rem 2rem 0 0;
+  }
+
+  .footer-restaurants {
+    width: 80%;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1315px) {
@@ -1766,21 +1704,6 @@ Pages des cartes des restaurants
   .footer-restaurants {
     max-width: 1715px;
   }
-
-  /********************************************
-  Taille maximale du site sur ecran large
-  ********************************************/
-  .header {
-    max-width: 2500px;
-  }
-
-  main {
-    max-width: 2500px;
-  }
-
-  .footer-accueil {
-    max-width: 2500px;
-  }
 }
 * {
   margin: 0;
@@ -1794,7 +1717,6 @@ header {
   text-align: center;
   z-index: 1000;
   font-family: "Shrikhand", Roboto;
-  width: 100%;
 }
 
 main {
@@ -1832,10 +1754,6 @@ html, header, main, body {
   width: 100%;
   height: auto;
   margin: 0;
-}
-
-.footer {
-  max-width: 1715px;
 }
 
 /*************************************************

@@ -36,7 +36,7 @@ Page d'accueil des restaurants
     }
 
     .section-restaurants {
-        width: 75%;
+        width: auto;
         background-color: #f2f2f2f2;
 
         .section-titre {
@@ -76,7 +76,7 @@ Page d'accueil des restaurants
         }
 
         .contenu-restaurants .rest-img {
-            width: 45vw;
+            width: 46vw;
             height: 20vw;
         }
     }
@@ -133,7 +133,7 @@ Page d'accueil des restaurants
         }
 
     .section-restaurants {
-        width: 75%;
+        width: auto;
         background-color: #f2f2f2f2;
 
         .section-titre {
@@ -173,7 +173,7 @@ Page d'accueil des restaurants
         }
 
         .contenu-restaurants .rest-img {
-            width: 45vw;
+            width: 47vw;
             height: 20vw;
         }
     }
@@ -232,7 +232,7 @@ Page d'accueil des restaurants
       
     .section-restaurants 
     {
-        width: 75%;
+        width: auto;
         margin: 0rem;
         border-radius: 0px;
 
@@ -245,7 +245,6 @@ Page d'accueil des restaurants
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 50px 1fr 1fr;
-            grid-column-gap: 2rem;
             margin: 5rem 0 0 0;
         }
 
@@ -274,8 +273,8 @@ Page d'accueil des restaurants
         }
 
         .contenu-restaurants .rest-img {
-            width: 35vw;
-            height: 15vw;
+            width: 48vw;
+            height: 20vw;
         }
     }
 }
@@ -332,7 +331,7 @@ Page d'accueil des restaurants
       
     .section-restaurants 
     {
-        width: 70%;
+        width: auto;
         margin: 0rem;
         border-radius: 0px;
 
@@ -366,12 +365,11 @@ Page d'accueil des restaurants
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 50px 1fr 1fr;
-            grid-column-gap: 2rem;
             margin: 5rem 0 0 0;
             
             .rest-img {
-            width: 35vw;
-            height: 15vw;
+            width: 48vw;
+            height: 20vw;
             }
         }
         
@@ -380,42 +378,6 @@ Page d'accueil des restaurants
             margin: 0.5rem 1rem 3rem 1rem;
         }        
     }
-}
-
-.footer-accueil
-{
-    background-color: black;
-    width: 100%;
-    
-    .footer-container {
-    @extend %flex-col;
-    padding: 1rem;
-
-        .footer-menus {
-        display: flex;
-        justify-content: space-around;
-        height: 2rem;
-        padding: 5rem;
-        font-size: 1.5rem            
-        }
-
-        .footer-liens {
-        padding: 0;
-        }
-
-        .footer-logo {
-        font-size: 2rem;
-        text-decoration: none;
-        }
-        
-        .footer-icon1 {
-        font-size: 2rem;
-        }
-
-        .footer-icon2 {
-        font-size: 2rem;
-        }
-    }    
 }
 
 /***********************************************************************
@@ -435,6 +397,10 @@ Pages des cartes des restaurants
         background-color: white;
         margin-top: -6.8rem;
         border-radius: 2rem 2rem 0 0;
+    }
+
+    .footer-restaurants {
+        width: 80%;
     }
 }    
 
@@ -614,20 +580,5 @@ Pages des cartes des restaurants
 
     .footer-restaurants {
         max-width: 1715px;
-    }
-
-    /********************************************
-    Taille maximale du site sur ecran large
-    ********************************************/
-    .header {
-        max-width: 2500px;
-    }
-
-    main {
-        max-width: 2500px;
-    }
-
-    .footer-accueil {
-        max-width: 2500px;
     }
 }
