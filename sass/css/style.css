@@ -854,6 +854,10 @@ Pages des cartes des restaurants
   .menus .desserts {
     max-width: 90%;
   }
+
+  .footer-restaurants {
+    width: 100%;
+  }
 }
 @media screen and (min-width: 1315px) and (max-width: 1715px) {
   .img-menus {
@@ -1600,6 +1604,10 @@ Pages des cartes des restaurants
   }
   .menus .desserts {
     max-width: 90%;
+  }
+
+  .footer-restaurants {
+    width: 100%;
   }
 }
 @media screen and (min-width: 1315px) and (max-width: 1715px) {
