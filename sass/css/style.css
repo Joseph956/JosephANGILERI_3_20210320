@@ -129,7 +129,7 @@ header, .carte-restaurant {
   align-items: flex-end;
 }
 
-.footer-menus .footer-contact, .footer-menus .footer-legal, .footer-menus .footer-part, .footer-menus .footer-rest, .footer-contact, .footer-legal, .footer-part, .footer-rest {
+.footer-menus .footer-contact, .footer-menus .footer-legal, .footer-menus .footer-part, .footer-menus .footer-rest {
   color: white;
   padding: 0.3rem;
   text-decoration: none;
@@ -454,14 +454,14 @@ Section restaurants
 }
 
 /********************************
-Footer
+Footer de la page d'accueil
 ********************************/
 .footer-accueil {
   background-color: black;
   width: 100%;
 }
 .footer-accueil .footer-container {
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 1.5rem;
 }
 
 .footer-menus {
@@ -469,28 +469,23 @@ Footer
   list-style: none;
   text-decoration: none;
 }
-
-.footer-logo {
+.footer-menus .footer-logo {
   color: white;
   text-decoration: none;
   font-family: "Shrikhand", Roboto;
-  font-size: inherit;
+  font-size: 1.5rem;
 }
-
-.footer-liens {
+.footer-menus .footer-liens {
   padding: 0.2rem;
 }
-
-.footer-icon1 {
+.footer-menus .footer-icon1 {
   padding: 0.3rem;
   font-size: 1rem;
 }
-
-.footer-icon2 {
+.footer-menus .footer-icon2 {
   padding: 0.3rem;
   font-size: 0.7rem;
 }
-
 /***********************************************************************
 Page d'accueil des restaurants
 ***********************************************************************/
@@ -1212,6 +1207,9 @@ Bouton commander
   border: transparent;
 }
 
+/****************************************************
+Footer des restaurants
+****************************************************/
 .footer-restaurants {
   background-color: black;
   width: 100%;
@@ -1229,7 +1227,7 @@ Bouton commander
   color: white;
   text-decoration: none;
   font-family: "Shrikhand", Roboto;
-  font-size: inherit;
+  font-size: 1.5rem;
 }
 .footer-menus .footer-liens {
   padding: 0.2rem;

@@ -277,7 +277,7 @@ Section restaurants
 }
     
 /********************************
-Footer
+Footer de la page d'accueil
 ********************************/
 .footer-accueil {
     background-color: black;
@@ -285,7 +285,7 @@ Footer
     
     .footer-container {
         @extend %flex-col;
-        padding: 1.5rem 2rem;
+        padding: 1.5rem 1.5rem;
     }
 }
     
@@ -293,13 +293,12 @@ Footer
     color: white;
     list-style: none;
     text-decoration: none;
-}
 
     .footer-logo {
         color: white;
         text-decoration: none;
         font-family: $fonts;
-        font-size: inherit;
+        font-size: 1.5rem;
     }
 
     .footer-liens {
@@ -332,6 +331,7 @@ Footer
     .footer-contact {
         @extend %footer-liens;
     }
+}
 
 
     
