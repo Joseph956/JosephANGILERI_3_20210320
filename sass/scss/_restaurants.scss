@@ -251,7 +251,7 @@ Footer des restaurants
     }
 }
 
-.footer-menus {
+.footer-menus a {
     color: white;
     list-style: none;
     text-decoration: none;
@@ -262,9 +262,10 @@ Footer des restaurants
         font-family: $fonts;
         font-size: 1.5rem;
     }
-
+    
     .footer-liens {
         padding: 0.2rem;
+        
     }
 
     .footer-icon1 {

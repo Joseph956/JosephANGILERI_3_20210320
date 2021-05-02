@@ -129,7 +129,7 @@ header, .carte-restaurant {
   align-items: flex-end;
 }
 
-.footer-menus .footer-contact, .footer-menus .footer-legal, .footer-menus .footer-part, .footer-menus .footer-rest {
+.footer-menus a .footer-contact, .footer-menus a .footer-legal, .footer-menus a .footer-part, .footer-menus a .footer-rest, .footer-menus .footer-contact, .footer-menus .footer-legal, .footer-menus .footer-part, .footer-menus .footer-rest {
   color: white;
   padding: 0.3rem;
   text-decoration: none;
@@ -1218,25 +1218,25 @@ Footer des restaurants
   padding: 1rem;
 }
 
-.footer-menus {
+.footer-menus a {
   color: white;
   list-style: none;
   text-decoration: none;
 }
-.footer-menus .footer-logo {
+.footer-menus a .footer-logo {
   color: white;
   text-decoration: none;
   font-family: "Shrikhand", Roboto;
   font-size: 1.5rem;
 }
-.footer-menus .footer-liens {
+.footer-menus a .footer-liens {
   padding: 0.2rem;
 }
-.footer-menus .footer-icon1 {
+.footer-menus a .footer-icon1 {
   padding: 0.3rem;
   font-size: 1rem;
 }
-.footer-menus .footer-icon2 {
+.footer-menus a .footer-icon2 {
   padding: 0.3rem;
   font-size: 0.7rem;
 }
@@ -1742,6 +1742,7 @@ h1, h2, h3, h4 {
   font-style: normal;
   font-weight: normal;
   font-size: 1.5rem;
+  text-decoration: none;
 }
 
 p {
